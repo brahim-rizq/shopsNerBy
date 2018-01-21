@@ -29,7 +29,7 @@
                         {% endif %}
                     </div>
                     <div id="product-item">
-                        {% for shop in shops if shop.active %}
+                        {% for shop in shops if shop.status %}
                             <!-- Product 1 -->
                            
                             <div class="col-md-4 col-sm-6 col-xs-12 scroll mix {{shop.category.name}}" data-my-order="000{{shop.id}}"  data-infinite-scroll='{ "path": ".pagination__next", "append": ".post", "history": false }'>

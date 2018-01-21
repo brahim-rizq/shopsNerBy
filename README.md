@@ -1,6 +1,18 @@
 Nearby Shop Poject
 ========================
 
+run this command after pulling the project from github
+
+- composer install
+- php bin/console doctrine:database:create
+- php bin/console doctrine:schema:update --force
+
+the technology used to create this project  :
+- Php framework Symfony 3
+- Bootstrap 
+- jQuery 
+- Ajax Calls 
+- Pre made design 
 
 Symfony Standard Edition
 ========================

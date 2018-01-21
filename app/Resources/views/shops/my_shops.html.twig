@@ -34,7 +34,7 @@
                                         {% else %}
                                         <a href="{{ path('shops_show', { 'id': shop.id }) }}">
                                             <p class="product-title">{{ shop.name }}</p>
-                                            <div class="product-price" >{{shop.distance}} </div>
+                                            <div class="product-price" >{{shop.distance}} <small>Km</small></div>
                                          </a>
                                        
                                        {% endif %}
