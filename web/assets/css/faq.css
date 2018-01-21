@@ -1,0 +1,182 @@
+/*  Hero Area  */
+
+header.hero-area {
+    background: #f5f5f5;
+    padding-top: 170px;
+    padding-bottom: 50px;
+}
+.hero-area .header-title {
+    font-size: 62px;
+    font-weight: 100;
+    line-height: 50px;
+}
+@media (max-width: 970px) {
+    header.hero-area {
+        padding-top: 130px;
+        padding-bottom: 30px;
+    }
+    .hero-area .header-title {
+        font-size: 48px;
+        line-height: 40px;
+    }
+}
+/* FAQ */
+
+#faq {
+    background: #ffffff;
+}
+/* Style the buttons that are used to open and close the accordion panel */
+
+#faq button.accordion {
+    background-color: transparent;
+    color: #262C30;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    border: 1px solid #efefef;
+    transition: 0.4s;
+    margin-top: -1px;
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+#faq button.accordion.active,
+button.accordion:hover {
+    background-color: #efefef !important;
+    border: 1px solid #efefef;
+    transition: 0.4s;
+}
+#faq .accordion-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 600;
+}
+/* Style the accordion panel. Note: hidden by default */
+
+#faq div.panel {
+    padding: 0 18px;
+    background-color: transparent;
+    display: none;
+}
+/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
+
+#faq div.panel.show {
+    display: block !important;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#faq div.panel {
+    padding: 0 18px;
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin: 0px;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#faq div.panel.show {
+    opacity: 1;
+    max-height: 500px;
+    /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+    
+    padding: 2rem;
+    background: #fcfcfc;
+}
+#faq button.accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    
+    font-size: 13px;
+    color: #262C30;
+    float: right;
+    margin-left: 5px;
+}
+#faq button.accordion.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+    
+    color: #ffffff;
+}
+/*--   FAQ Responsive   --*/
+
+@media(max-width:670px) {
+    #faq button.accordion h4 {
+        padding-right: 25px;
+    }
+}
+/*  Call to Action  */
+
+#call-to-action {
+    background: url("../img/hero-6.jpg") no-repeat transparent;
+    background-size: cover;
+    background-position: center;
+    min-height: 720px;
+}
+#call-to-action .header-text .header-heading {
+    margin-bottom: 25px;
+    font-size: 62px;
+    font-weight: 100;
+    line-height: 62px;
+    font-family: 'Montserrat';
+}
+#call-to-action .header-text p {
+    font-size: 20px;
+    line-height: 28px;
+    opacity: .5;
+    margin-bottom: 30px;
+}
+/* Section Responsive CSS */
+
+@media (max-width: 1040px) {
+    /* CSS for CTA */
+    
+    #call-to-action .header-text .header-heading {
+        font-size: 36px;
+        margin-top: 10px;
+        line-height: 40px;
+    }
+    #call-to-action .header-text p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+@media (max-width: 970px) {
+    /* CSS for CTA */
+    
+    #call-to-action .header-text .header-heading {
+        font-size: 48px;
+        line-height: 32px;
+    }
+    #call-to-action .header-text p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+@media (max-width: 670px) {
+    /* CSS for CTA */
+    
+    #call-to-action .header-text .header-heading {
+        font-size: 42px;
+    }
+}
+@media (max-width: 490px) {
+    /* CSS for CTA */
+    
+    #call-to-action .header-text .header-heading {
+        font-size: 36px;
+    }
+    #call-to-action .header-text p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

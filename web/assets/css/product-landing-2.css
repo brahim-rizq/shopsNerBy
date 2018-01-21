@@ -1,0 +1,274 @@
+/* Hero Area */
+
+header.hero-area {
+    background: #f5f5f5;
+    padding-top: 300px;
+    padding-bottom: 150px;
+    min-height: 720px;
+    background: url("../img/hero-12.jpg") no-repeat fixed transparent;
+    background-size: cover;
+    background-position: center;
+}
+header .header-text-area {
+    position: relative;
+    z-index: 999;
+}
+.text-error h1 {
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 90px;
+}
+.hero-area .header-title {
+    font-size: 62px;
+    font-weight: 100;
+    line-height: 62px;
+}
+.hero-area p {
+    font-size: 20px;
+    line-height: 28px;
+    opacity: .5;
+    margin: 12px auto;
+}
+/* Responsive CSS For Hero Area */
+/* Desktop & Laptop */
+
+@media (max-width: 1450px) {
+    header.hero-area {
+        min-height: 780px;
+    }
+}
+/* Laptop */
+
+@media (max-width: 1290px) {
+    header.hero-area {
+        min-height: 700px;
+        padding-top: 260px;
+    }
+}
+/* Tablet Landscape */
+
+@media (max-width: 1040px) {
+    header.hero-area {
+        min-height: 560px;
+        padding-top: 200px;
+    }
+    .hero-area .header-title {
+        font-size: 48px;
+        line-height: 40px;
+    }
+    .hero-area p {
+        line-height: 24px;
+        margin: 15px auto;
+    }
+}
+/* Tablet Portrait */
+
+@media (max-width: 970px) {
+    header.hero-area {
+        min-height: 500px;
+        padding-top: 200px;
+    }
+    .hero-area .header-title {
+        font-size: 42px;
+        line-height: 36px;
+    }
+    .hero-area p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+/* Phone */
+
+@media (max-width: 670px) {
+    header.hero-area {
+        min-height: 400px;
+        padding-top: 140px;
+    }
+    .hero-area .header-title {
+        font-size: 36px;
+        line-height: 28px;
+    }
+    .hero-area p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+@media (max-width: 490px) {
+    header.hero-area {
+        padding-top: 130px;
+        min-height: 380px;
+    }
+}
+/* Service Area */
+
+.service {
+    padding: 0px;
+}
+.service .section-img img {
+    width: 100%;
+}
+.service .section-content {
+    padding: 120px 12%;
+}
+.service .header-sub-title {
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+.service p {
+    line-height: 24px;
+}
+.service .btn {
+    margin-top: 30px;
+}
+/* Service Area 1 */
+
+#service-sec-1 {
+    background: #f9f9f9;
+}
+/* Service Area 2 */
+
+#service-sec-2 {
+    background: #f9f9f9;
+}
+/* Tablet Landscape */
+
+@media (max-width: 1030px) {
+    .service .section-img img {} .service .section-content {
+        padding: 70px 10%;
+    }
+}
+/* Tablet Portrait */
+
+@media (max-width: 970px) {
+    .service .section-img img {
+        width: 80%;
+        margin: 0px auto;
+        padding-top: 70px;
+    }
+}
+
+/*  Call to Action  */
+
+#call-to-action {
+    background: url("../img/hero-15.jpg") no-repeat transparent;
+    background-size: cover;
+    background-position: center;
+    padding: 160px 0px;
+    min-height: 720px;
+}
+#call-to-action .header-text .header-heading {
+    margin-bottom: 25px;
+    font-size: 62px;
+    font-weight: 100;
+    line-height: 62px;
+}
+#call-to-action .header-text p {
+    font-size: 20px;
+    line-height: 28px;
+    opacity: .5;
+    margin-bottom: 30px;
+}
+/* Sections Responsive CSS */
+/* Tablet Landscape */
+
+@media (max-width: 1040px) {
+    /* CSS for promo product, exclusive product large blocks & mobile app CTA */
+    
+    #call-to-action .header-text .header-heading {
+        font-size: 36px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        line-height: 40px;
+    }
+    #call-to-action .header-text p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+/* Phone Portrait */
+
+@media (max-width: 670px) {
+    /* CSS for promo product & mobile app CTA */
+    
+    #call-to-action .header-text .header-heading {
+        font-size: 42px;
+    }
+}
+@media (max-width: 490px) {
+    /* CSS for promo product & mobile app CTA */
+    
+    #call-to-action .header-text .header-heading {
+        font-size: 36px;
+    }
+    #call-to-action .header-text p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+@media (max-width: 400px) {
+    #call-to-action .header-text p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+/* Product CSS */
+
+#related-products {
+    background: #fff;
+}
+#related-products .section-heading-wrap {
+    margin-bottom: 30px;
+}
+#related-products .btn-ghost {
+    margin-top: 15px;
+}
+#related-products .btn-ghost .fa {
+    margin: 0px;
+}
+#related-products a {
+    color: #262C30;
+}
+#related-products figure {
+    margin-bottom: 30px;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#related-products figure:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#related-products figure figcaption {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.01);
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#related-products figure:hover figcaption {
+    background: rgba(0, 0, 0, 0.0);
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#related-products .product-price del {
+    opacity: .5;
+    margin-right: 20px;
+}
+#related-products .promo-price {
+    color: #e53935;
+}

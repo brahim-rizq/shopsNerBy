@@ -1,0 +1,9 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{{ form_start(form, { 'action': path('fos_user_resetting_reset', {'token': token}), 'attr': { 'class': 'Shops_nearby' } }) }}
+    {{ form_widget(form) }}
+    <div>
+        <input class="btn btn-sm btn-primary" type="submit" value="{{ 'resetting.reset.submit'|trans }}" />
+        <a class="btn btn-sm btn-default pull-right" href="{{ path('fos_user_profile_show') }}" title=" profile">Cancel</a>
+    </div>
+{{ form_end(form) }}

@@ -1,0 +1,246 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="col-md-7 animated fadeInRight">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Profil Details <small>{{user.Userinfo.firstname}} {{user.Userinfo.lastname}}</small></h5>
+        </div>
+        <div class="ibox-content">
+
+            <div>
+                <h3 class="text-success text-center">More Informations </h3>
+
+    <div class="panel-body inf-content" >
+        <div class="row" >
+            <div class="col-md-5 text-center"  style="padding:0px;">
+                
+                
+                <h4> {{user.Userinfo.firstname}} {{user.Userinfo.lastname}}</h4>
+                    <img alt="{{user.Userinfo.firstname}}" style="width:300px;height:270px;" title="{{user.Userinfo.firstname}}" class="img-circle img-thumbnail img-responsive" src="{{asset('uploads')}}/profile/{% if user.Userinfo.profile is defined %}{{user.Userinfo.profile}}{% else %}avatar.png{% endif %}"> 
+
+				<div class="element-dropdown">
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <i class="fa fa-pencil" aria-hidden="true"></i> Edit Profile
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu sub-menu-panel" aria-labelledby="dropdownMenu2">
+                            <li class="sub-menu-item"><a href="{{ path('fos_user_change_password')}}" class="small" title="password"><i class="fa fa-lock" aria-hidden="true"></i> {{ 'change_password.submit'|trans }} </a></li>
+                            <li class="sub-menu-item"><a class="small" href="{{ path('fos_user_profile_edit') }}" title="login"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Profile</a></li>
+                         
+                        </ul>
+                    </div>
+                </div>                
+            </div>
+            <div class="col-md-7" style="padding:0px;">
+                <!-- <strong>Information</strong><br> -->
+                <div class="table-responsive">
+                <table class="table table-condensed table-hover">
+                    <tbody>
+                        <tr>        
+                            <td style="border-top:none;">
+                                <strong>
+                                    Joined Date                                                
+                                </strong>
+                            </td>
+                            <td class="text-primary" style="border-top:none;">
+                                {{user.createdAt |date('d-m-Y')}}     
+                            </td>
+                        </tr>
+                        <tr>        
+                            <td>
+                                <strong>
+                                    Code Identification                                                
+                                </strong>
+                            </td>
+                            <td class="text-primary">
+                                <span>{{user.username}}</span>    
+                            </td>
+                        </tr>
+
+                        <tr>        
+                            <td>
+                                <strong>
+                                    Email                                                
+                                </strong>
+                            </td>
+                            <td class="text-primary">
+                                {{user.email}}  
+                            </td>
+                        </tr>
+
+                        {% if user.Userinfo %}
+		                        <tr>    
+		                            <td>
+		                                <strong>
+		                                    Name                                                
+		                                </strong>
+		                            </td>
+		                            <td class="text-primary">
+		                                {{user.Userinfo.firstname}} {{user.Userinfo.lastname}}    
+		                            </td>
+		                        </tr>                    
+		                        <tr>    
+		                            <td>
+		                                <strong>
+		                                      
+		                                    CIN                                                
+		                                </strong>
+		                            </td>
+		                            <td class="text-primary">
+		                                {{user.Userinfo.cin}}    
+		                            </td>
+		                        </tr>
+		                        <tr>        
+		                            <td>
+		                                <strong>
+		                                    Sex                                             
+		                                </strong>
+		                            </td>
+		                            <td class="text-primary">
+		                                  {% if user.Userinfo.genre == 'Male' %} <i class="fa fa-male"></i> {{user.Userinfo.genre}}{% else %} <i class="fa fa-female"></i> {{user.Userinfo.genre}}{% endif %}
+		                            </td>
+		                        </tr>    		                    
+                                <tr>        
+                                    <td>
+                                        <strong>
+                                            BirthDay                                                 
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        {{user.Userinfo.birthday | date('D-m-Y')}} 
+                                    </td>
+                                </tr>
+    		                    <tr>    
+    		                        <td>
+    		                            <strong>
+    		                                Phone                                                
+    		                            </strong>
+    		                        </td>
+    		                        <td class="text-primary">
+    		                            {{user.Userinfo.phone}}    
+    		                        </td>
+    		                    </tr>
+                      
+                        {% endif %}
+                        <tr>        
+                            <td>
+                                <strong>
+                                    Last Sign-in                                               
+                                </strong>
+                            </td>
+                            <td class="text-primary">
+                                {{user.lastLogin |ago}}
+                            </td>
+                        </tr>   
+
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+             </div>
+
+        </div>
+    </div>
+
+</div>  
+{% if user.Userinfo %}
+<div class="col-md-5 animated fadeInRight">
+    <div class="ibox float-e-margins">
+               <div class="ibox-title">
+            <h5>Address Details </h5>
+        </div>
+        <div class="ibox-content">
+
+            <div>
+                <h3 class="text-success text-center">Current Location </h3>
+
+    <div class="panel-body inf-content" >
+        <div class="row" >
+            <div class="col-md-12" style="padding:0px;">
+                <!-- <strong>Information</strong><br> -->
+                <div class="table-responsive">
+                <table class="table table-condensed table-hover">
+                    <tbody>
+                        <tr>        
+                            <td style="border-top:none;">
+                                <strong>
+                                    Latitude                                               
+                                </strong>
+                            </td>
+                            <td class="text-primary" style="border-top:none;">
+                                {{user.Userinfo.lat|raw}}     
+                            </td>
+                        </tr>
+                        <tr>        
+                            <td>
+                                <strong>
+                                   Longitude                                               
+                                </strong>
+                            </td>
+                            <td class="text-primary">
+                                <span>{{user.Userinfo.lang|raw}}</span>    
+                            </td>
+                        </tr>
+
+                        <tr>        
+                            <td>
+                                <strong>
+                                    Zip Code                                                
+                                </strong>
+                            </td>
+                            <td class="text-primary">
+                                {{user.Userinfo.zipCode}}  
+                            </td>
+                        </tr>
+    		                    <tr>        
+    		                        <td>
+    		                            <strong>
+    		                                City                                                
+    		                            </strong>
+    		                        </td>
+    		                        <td class="text-primary">
+    		                            {{user.Userinfo.city}}     
+    		                        </td>
+    		                    </tr>
+
+    		                    <tr>        
+    		                        <td>
+    		                            <strong>
+    		                                Address                                                
+    		                            </strong>
+    		                        </td>
+    		                        <td class="text-primary">
+    		                            {{user.Userinfo.adresse}}  
+    		                        </td>
+    		                    </tr>
+    		                    <tr>        
+    		                        <td>
+    		                            <strong>
+    		                              <i class="fa fa-map-marker" aria-hidden="true"></i> Current Location                                           
+    		                            </strong>
+    		                        </td>
+    		                        <td class="text-primary">
+    		                            <a href="{{path('location_edit')}}" title="location" class="small"> Change Ur Current Location <i class="fa fa-pencil" aria-hidden="true"></i> </a>  
+    		                        </td>
+    		                    </tr>    
+                    
+
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+             </div>
+
+        </div>
+    </div>
+
+</div>  
+
+ {% endif %}

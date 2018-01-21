@@ -1,0 +1,130 @@
+/* --- Primary Theme Color is #3BB18F ---  */
+/* --- Secondery Color is #8c8c8c ---  */
+
+
+
+.btn,
+.btn-icon-only,
+footer .social-buttons a,
+footer .footer-links a:hover,
+footer .credit .brand-credit a,
+footer #newsletter-signup button:hover ,
+#exclusive-products .sec-sm a,
+#exclusive-promo figure a,
+#owl-2 .carousel-content a,
+.pagination .prev a:hover,
+.pagination .prev a:focus,
+.pagination .prev a:active,
+.pagination .next a:hover,
+.pagination .next a:focus,
+.pagination .next a:active,
+#related-products a.btn,
+#team-member figure .person-icon,
+#location .location-content a:hover,
+#location .location-sec a:hover,
+.key-services .content-icon .fa,
+.features .content-icon,
+.feature .feature-icon,
+#featured-products .product-icon .fa,
+#trending-products .product-icon .fa,
+.hero-area .text-error,
+.hero-area .countdown,
+.nav-tabs>li>a:hover {
+    color: #3BB18F;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #3BB18F;
+}
+.btn-outline {
+    color: #3BB18F;
+    border-color: #3BB18F;
+}
+.open .dropdown-toggle.btn-xl {
+    border-color: #3BB18F;
+    background-color: #3BB18F;
+}
+.btn:hover,
+.btn:focus,
+.btn:active {
+    background: #fff;
+    color: #3BB18F;
+}
+.btn-action:hover{
+    color: #3BB18F !important; 
+}
+
+/* ---Input Field--- */
+
+input.form-control:focus,
+input.form-control:active,
+textarea:focus,
+textarea:active {
+    border: 2px solid #3BB18F;
+    color: #3BB18F;
+}
+/* Default Navbar CSS Reset */
+
+nav.navbar-default .navbar-nav li a.active,
+nav.navbar-default .navbar-nav li a:hover,
+nav.navbar-default .navbar-nav li a:focus,
+nav.navbar-default .navbar-nav>.open>a,
+nav.navbar-default .navbar-nav>.open>a:focus,
+nav.navbar-default .navbar-nav>.open>a:hover,
+nav.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,
+nav.navbar-default .navbar-nav .open .dropdown-menu>li>a:focus,
+nav .nav-bar-btn .btn-nav:hover,
+nav .nav-bar-btn .btn-nav:focus,
+nav .nav-bar-btn .btn-nav:active,
+nav .form-wrap input,
+nav .form-wrap input:hover,
+nav .form-wrap input:focus,
+nav .form-wrap input:active,
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls .owl-page:hover span,
+#owl-offer-slider.owl-theme .owl-controls .owl-page.active span,
+#owl-offer-slider.owl-theme .owl-controls .owl-page:hover span,
+.call-to-action-2,
+#owl-trending-products.owl-theme .owl-controls .owl-page.active span,
+#owl-trending-products.owl-theme .owl-controls .owl-page:hover span,
+#owl-1 #bar,
+.pagination-number > li > a:hover,
+.pagination-number > li > span:hover,
+.pagination-number > .active > a,
+.pagination-number > .active > span,
+.pagination-number > .active > a:hover,
+.pagination-number > .active > span:hover,
+.pagination-number > .active > a:focus,
+.pagination-number > .active > span:focus {
+    background-color: #3BB18F;
+}
+nav .navbar-nav .dropdown-menu,
+nav .navbar-nav .open .dropdown-menu {
+    border-bottom: 1px solid #8c8c8c;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    color: #3BB18F;
+    border-color: #3BB18F;
+}
+/* Footer */
+
+footer .social-buttons a:hover {
+    background: #ffffff;
+}
+/*  Product Page  */
+
+#products-list .product-filters a.active,
+#products-list .product-filters a.btn:hover,
+#products-list .product-filters a.btn:focus,
+#products-list .product-filters a.btn:active {
+    color: #3BB18F;
+    border-bottom: 3px solid #3BB18F;
+}
+/*   About Page: */
+
+#team-member figure:hover img {
+    border: 2px solid #3BB18F;
+}

@@ -1,0 +1,16 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% block headerCrumb %}
+    <a class="header-title" href="{{ path('fos_user_profile_edit') }}" > Edit Profile</a>
+
+    <span class="pull-right"><a href="{{ path('fos_user_profile_show') }}" title="login"> Profile</a></span>
+
+{% endblock %}
+
+{% block fos_user_content %}
+
+<div class="col-md-9 col-md-offset-1">
+	{% include "@FOSUser/Profile/edit_content.html.twig" %}
+</div>
+
+{% endblock fos_user_content %}

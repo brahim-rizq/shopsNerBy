@@ -1,0 +1,106 @@
+/* Hero Area */
+
+header.hero-area {
+    background: #ececec;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+header.hero-area img {
+    width: 100%;
+}
+header.hero-area .section-content {
+    padding-top: 220px;
+    padding-bottom: 120px;
+    padding-left: 12%;
+}
+.text-error {
+    font-size: 120px;
+    font-weight: 700;
+}
+.hero-area .header-title {
+    font-size: 62px;
+    font-weight: 100;
+    margin-top: 50px;
+}
+.hero-area p {
+    font-size: 20px;
+    line-height: 28px;
+    opacity: .5;
+    margin: 30px auto;
+}
+@media (max-width: 970px) {
+    header.hero-area .section-content {
+        padding-top: 120px;
+        padding-bottom: 60px;
+        padding-left: 0px;
+        text-align: center;
+    }
+}
+@media (max-width: 490px) {
+    .text-error {
+        font-size: 90px;
+    }
+    .hero-area .header-title {
+        font-size: 48px;
+        margin: 20px auto;
+    }
+    .hero-area p {
+        font-size: 16px;
+        margin: 20px auto;
+    }
+}
+/* Locations */
+
+#location {
+    background-color: #f9f9f9;
+}
+#location .location-title {
+    margin-bottom: 10px;
+}
+#location .location-content a {
+    font-size: 16px;
+    color: #8c8c8c;
+    font-weight: 400;
+}
+#location .location-content a:hover {
+    color: #262C30;
+}
+@media (max-width: 970px) {
+    #location .location-content {
+        margin-bottom: 30px;
+    }
+}
+/* Feedback Form */
+
+#contact-form {
+    margin: 0px auto;
+    margin-top: 50px;
+    text-align: center;
+    width: 85%;
+}
+#contact-form label {
+    font-weight: 100;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+#contact-form input,
+#contact-form textarea {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+#contact-form textarea {
+    padding: 16px 24px;
+}
+#contact-form button {
+    margin-top: 10px;
+}
+#contact-form::-webkit-input-placeholder,
+#contact-form::-moz-placeholder,
+#contact-form:-moz-placeholder,
+#contact-form:-ms-input-placeholder {
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 700;
+}

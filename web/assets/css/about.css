@@ -1,0 +1,444 @@
+/* Hero Area */
+
+header.hero-area {
+    background: #f5f5f5;
+    padding-top: 300px;
+    min-height: 820px;
+    position: relative;
+    overflow: hidden;
+}
+header .full-page-fill,
+header .full-page-fill .header-overlay {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+header .full-page-fill .header-overlay {
+    background: rgba(245, 245, 245, 0.72);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+header .full-page-fill video {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0px;
+    z-index: 0;
+}
+header .header-text-area {
+    position: relative;
+    z-index: 999;
+}
+.text-error h1 {
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 90px;
+}
+.hero-area .header-title {
+    font-size: 62px;
+    font-weight: 100;
+}
+.hero-area p {
+    font-size: 20px;
+    line-height: 28px;
+    opacity: .5;
+    margin: 30px auto;
+}
+/* Responsive CSS For Hero Area */
+/* Desktop & Laptop */
+
+@media (max-width: 1450px) {
+    header.hero-area {
+        min-height: 780px;
+    }
+}
+/* Laptop */
+
+@media (max-width: 1290px) {
+    header.hero-area {
+        min-height: 700px;
+        padding-top: 260px;
+    }
+}
+/* Tablet Landscape */
+
+@media (max-width: 1030px) {
+    header.hero-area {
+        min-height: 560px;
+        padding-top: 200px;
+    }
+    .hero-area .header-title {
+        font-size: 48px;
+        line-height: 40px;
+    }
+    .hero-area p {
+        line-height: 24px;
+        margin: 15px auto;
+    }
+}
+/* Tablet Portrait */
+
+@media (max-width: 970px) {
+    header.hero-area {
+        min-height: 500px;
+        padding-top: 200px;
+    }
+    .hero-area .header-title {
+        font-size: 42px;
+        line-height: 36px;
+    }
+    header .full-page-fill video {
+        width: 120%;
+        left: -10%;
+    }
+    .hero-area p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+/* Phone */
+
+@media (max-width: 670px) {
+    header.hero-area {
+        min-height: 420px;
+        padding-top: 140px;
+    }
+    .hero-area .header-title {
+        font-size: 36px;
+        line-height: 28px;
+    }
+    .hero-area p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+@media (max-width: 490px) {
+    header .full-page-fill video {
+        width: 160%;
+        left: -30%;
+    }
+    header.hero-area {
+        padding-top: 120px;
+    }
+}
+@media (max-width: 400px) {
+    header .full-page-fill video {
+        width: 260%;
+        left: -80%;
+    }
+}
+/*  CSS for Modal  */
+
+.video-in-modal video {
+    width: 100%;
+    height: auto;
+}
+.video-in-modal,
+.person-in-modal {
+    z-index: 9999;
+}
+.video-in-modal .modal-dialog,
+.person-in-modal .modal-dialog {
+    width: 80%;
+}
+.video-in-modal .modal-content,
+.person-in-modal .modal-content {
+    padding: 100px 0;
+    min-height: 100%;
+    border: 0;
+    border-radius: 0;
+    text-align: left;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.video-in-modal .close-modal,
+.person-in-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.video-in-modal .close-modal:hover,
+.person-in-modal .close-modal:hover {
+    opacity: .3;
+}
+.video-in-modal .close-modal .lr,
+.person-in-modal .close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 45px;
+    margin-left: 35px;
+    background-color: #4d4d4d;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.video-in-modal .close-modal .lr .rl,
+.person-in-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 45px;
+    background-color: #4d4d4d;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.video-in-modal .modal-media-wrap,
+.person-in-modal .modal-media-wrap {
+    margin: auto;
+}
+@media (max-width: 1030px) {
+    .video-in-modal .modal-dialog,
+    .person-in-modal .modal-dialog {
+        width: 90%;
+    }
+}
+/*   About Sections CSS  */
+
+.about {
+    padding: 0px;
+}
+.about .section-img img {
+    width: 100%;
+}
+.about .section-content {
+    padding: 120px 12%;
+}
+.about .section-heading {
+    margin-bottom: 30px;
+}
+.about p {
+    line-height: 24px;
+    position: relative;
+}
+.about .btn {
+    margin-top: 30px;
+}
+/*   About Sections 1  */
+
+#about-sec-1 {
+    background: #f3f4f6;
+}
+/*   About Sections 2  */
+
+#about-sec-2 {
+    background: #e7e6e1;
+}
+/* Responsive CSS For Hero Area */
+/* Tablet Landscape */
+
+@media (max-width: 1030px) {
+    .about .section-img img {} .about .section-content {
+        padding: 70px 10%;
+    }
+}
+/* Tablet Portrait */
+
+@media (max-width: 970px) {
+    .about .section-img img {
+        width: 80%;
+        margin: 0px auto;
+        padding-top: 70px;
+    }
+}
+/*   Team Sections CSS  */
+
+#team-member figure:hover img {
+    border: 2px solid #262C30;
+}
+#team-member figure:hover figcaption {
+    opacity: 1;
+    transition: 0.5s all ease-in-out;
+    -webkit-transition: 0.5s all ease-in-out;
+    -moz-transition: 0.5s all ease-in-out;
+    -o-transition: 0.5s all ease-in-out;
+    -ms-transition: 0.5s all ease-in-out;
+}
+#team-member .person-icon .fa {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    background: #fff;
+    border-radius: 50%;
+    font-size: 36px;
+    padding: 16px;
+    border: 1px solid transparent;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 5%;
+}
+#team-member .person-social .fa,
+.person-in-modal .person-social .fa {
+    margin: 5px;
+    color: #262C30;
+}
+/*  Team Listing Area  */
+
+#team-member .team-members {
+    margin-top: 50px;
+}
+#team-member figure {
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+#team-member figure a {
+    color: #262C30;
+}
+/* Image Hover effect is optional */
+
+#team-member figure:hover img {
+    border: 1px solid #f5f5f5;
+}
+.person-in-modal .modal-media-wrap .person-social {
+    margin-bottom: 30px;
+}
+.person-in-modal .modal-media-wrap img {
+    width: 100%;
+}
+/* Section Responsive CSS */
+/* Laptop & Desktop */
+
+@media (min-width: 1030px) {
+    /* Product Section Content & Hover Effect */
+    
+    #team-member figure figcaption {
+        background: rgba(255, 255, 255, 0.95);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 30px;
+        padding-top: 25%;
+        padding-right: 60px;
+        opacity: 0;
+        text-align: center;
+        transition: 0.3s all ease-in-out;
+        -webkit-transition: 0.3s all ease-in-out;
+        -moz-transition: 0.3s all ease-in-out;
+        -o-transition: 0.3s all ease-in-out;
+        -ms-transition: 0.3s all ease-in-out;
+    }
+    #team-member figure:hover figcaption {
+        opacity: 1;
+        text-align: center;
+        transition: 0.3s all ease-in-out;
+        -webkit-transition: 0.3s all ease-in-out;
+        -moz-transition: 0.3s all ease-in-out;
+        -o-transition: 0.3s all ease-in-out;
+        -ms-transition: 0.3s all ease-in-out;
+    }
+    #team-member .person-icon .fa {
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        background: #fff;
+        border-radius: 50%;
+        font-size: 36px;
+        padding: 16px;
+        border: 1px solid transparent;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 5%;
+    }
+}
+/* Laptop & Desktop */
+
+@media (max-width: 1440px) and (min-width: 1030px) {
+    /* Feature Product Icon */
+    
+    #team-member .person-icon .fa {
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+        padding: 10px;
+    }
+    #team-member figure figcaption {
+        padding-top: 18%;
+    }
+}
+/* Tablet Landscape */
+
+@media (max-width: 1030px) {
+    /* Product List Section Content */
+    
+    #team-member figure figcaption {
+        opacity: 1;
+        position: relative;
+        float: left;
+        width: 100%;
+    }
+    #team-member .person-icon {
+        display: none;
+    }
+    #team-member figure figcaption h4 {
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+}
+/*  Call to Action  */
+
+#call-to-action {
+    background: url("../img/hero-22.jpg") no-repeat transparent;
+    background-size: cover;
+    background-position: top center;
+    padding: 160px 0px;
+    min-height: 720px;
+}
+#call-to-action .header-text .header-heading {
+    margin-bottom: 25px;
+    font-size: 62px;
+    font-weight: 100;
+    line-height: 62px;
+}
+#call-to-action .header-text p {
+    font-size: 20px;
+    line-height: 28px;
+    opacity: .5;
+    margin-bottom: 30px;
+}
+/* Sections Responsive CSS */
+/* Tablet Landscape */
+
+@media (max-width: 1040px) {
+    /* CSS for promo product, exclusive product large blocks & mobile app CTA */
+    
+    #call-to-action .header-text .header-heading {
+        font-size: 36px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        line-height: 40px;
+    }
+    #call-to-action .header-text p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+/* Phone Portrait */
+
+@media (max-width: 670px) {
+    /* CSS for promo product & mobile app CTA */
+    
+    #call-to-action .header-text .header-heading {
+        font-size: 42px;
+    }
+}
+@media (max-width: 490px) {
+    /* CSS for promo product & mobile app CTA */
+    
+    #call-to-action .header-text .header-heading {
+        font-size: 36px;
+    }
+    #call-to-action .header-text p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+@media (max-width: 400px) {
+    #call-to-action .header-text p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}

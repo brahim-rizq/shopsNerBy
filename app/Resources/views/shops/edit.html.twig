@@ -1,0 +1,120 @@
+{% extends 'shops.html.twig' %}
+
+
+    {% block breadCrumb %}
+        <header class="hero-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="header-title">Edit Shop</h2>
+                    </div>
+                </div>
+            </div>
+        </header>
+    {% endblock %}
+{% block content %}
+    
+<section>
+    <div class="container">
+        <div class="col-md-12">
+            <h4 class="text-center">Edit Shop {{shop.name}}</h4><hr>
+            {{ form_start(edit_form) }}
+                <div class="col-md-4">
+                    <h5 class="text-info">Shop Info</h5><hr>
+                    <div class="form-group">
+                     <label for="ShopName">Shop Name</label>
+                        {{ form_widget(edit_form.name, {'attr': {'id':'ShopName'}})  }}     
+                    </div>
+                    <div class="form-group">
+                     <label for="lang">Longitude</label>
+                        {{ form_widget(edit_form.lang, {'attr': {'id':'lang'}})  }}     
+                    </div>
+                    <div class="form-group">
+                     <label for="lat">Latitude</label>
+                        {{ form_widget(edit_form.lat, {'attr': {'id':'lat'}})  }}     
+                    </div>
+                    <div class="form-group">
+                     <label for="city">City</label>
+                        {{ form_widget(edit_form.city, {'attr': {'id':'city'}})  }}     
+                    </div>
+                    <div class="form-group">
+                     <label for="category">Category</label>
+                        {{ form_widget(edit_form.category, {'attr': {'id':'category'}})  }}     
+                    </div>
+                    <div class="form-group">
+                     <label for="address">Address</label>
+                        {{ form_widget(edit_form.address, {'attr': {'id':'address','class':'sizeNone'}})  }}     
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h5 class="text-info">Google Map</h5><hr>
+                    <div id="map_canvas" style="width: 100%; height: 450px;margin-bottom: 20px;"></div>
+                    <div class="form-group">
+                     <label for="status">Status</label>
+                        {{ form_widget(edit_form.status, {'attr': {'id':'status','class':'sizeNone'}})  }}     
+                    </div>
+                    <div class="form-group">
+                     <label for="imagefile">Shop Photos</label>
+                        {{ form_widget(edit_form.imagefile, {'attr': {'id':'imagefile','class':'sizeNone'}})  }}     
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                     <label for="description">Shop Descriptions</label>
+                        {{ form_widget(edit_form.description, {'attr': {'id':'description','class':'sizeNone'}})  }}     
+                    </div>
+                    <div class="">
+                        <input class="btn btn-sm btn-primary" type="submit" value="Edit" />
+                        <a class="btn btn-sm btn-default pull-right" href="{{ path('shops_index') }}" title=" profile">Cancel</a>
+                    </div>
+                </div>
+                
+                
+            {{ form_end(edit_form) }}
+        </div>        
+    </div>
+</section>
+
+
+
+{% endblock %}
+
+{% block stylesheets %}
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyBWPtgDmUruJF55Lg5uwyiwjjK6fFXwkD8"></script>
+{% endblock %}
+
+{% block javascripts %}
+
+
+
+<script type="text/javascript">//<![CDATA[
+        window.onload=function(){
+          var map;
+          function initialize() {
+              var myLatlng = new google.maps.LatLng({{ shop.lat | raw }}, {{ shop.lang | raw }});
+
+              var myOptions = {
+                  zoom: 8,
+                  center: myLatlng,
+                  mapTypeId: google.maps.MapTypeId.ROADMAP
+              };
+              map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+              var marker = new google.maps.Marker({
+                  draggable: true,
+                  position: myLatlng,
+                  map: map,
+                  title: "Shop Location"
+              });
+
+              google.maps.event.addListener(marker, 'dragend', function (event) {
+                
+                  document.getElementById("appbundle_shops_lat").value = event.latLng.lat();
+                  document.getElementById("appbundle_shops_lang").value = event.latLng.lng();
+                  infoWindow.open(map, marker);
+              });
+          }
+          google.maps.event.addDomListener(window, "load", initialize());
+        }//]]> 
+    </script>
+{% endblock %}

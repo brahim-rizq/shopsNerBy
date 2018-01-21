@@ -1,0 +1,144 @@
+{% extends 'shops.html.twig' %}
+
+    {% block breadCrumb %}
+        <header class="hero-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="header-title">{{shop.name}}</h2>
+                    </div>
+                </div>
+            </div>
+        </header>
+    {% endblock %}
+
+{% block content %}
+    <!-- Product Details -->
+    <section id="product-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 text-center">
+                    <!-- bootstrap carousel -->
+                    <div class="wrapper">
+                        <div id="carousel-product" class="carousel slide" data-ride="carousel">
+                           <img src="{{ asset('uploads/shops/') }}{{shop.imageShops}}" alt="{{shop.name}}" class="img img-responsive" style="width: 100%;">
+                        </div>
+                    </div>
+                    <!-- /bootstrap carousel -->
+                </div>
+                <!-- Product Details -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="product-content">
+                        <span class="product-tag exclusive">{{shop.category.name}}</span>
+                        <h3 class="product-title">{{shop.name}}</h3>
+                        <h2 class="product-price">{{shop.distance}} <small>Km</small></h2>
+<!--                         <a href="contact-2.html" class="btn btn-action">Order Us  <i class="fa fa-chevron-right"></i></a>
+ -->                        <div class="product-description">
+                            <p{{shop.description}}</p>
+                            <h4 class="sub-title">Additional Information</h4>
+                            <h5 class="sub-title">City</h5>
+                            <p><span class="product-tag exclusive">{{shop.city}}</span></p>
+                            <h5 class="sub-title">Address</h5>
+                            <p>{{shop.address}}</p>
+                            <h5 class="sub-title">Created By</h5>
+                            <p><span class="product-tag exclusive">{{shop.createdBy.username}}</span></p>
+                            <h5 class="sub-title">Created At</h5>
+                            <p><span class="product-tag exclusive">{{shop.createdAt|date('d-m-Y')}} </span>({{shop.createdAt|ago}})</p>
+                            <h5 class="sub-title">Description</h5>
+                            <p>{{shop.description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Product Details -->
+            </div>
+        </div>
+    </section>
+    <!-- /Product Details -->
+    <section id="related-products">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-xs-10 section-heading-wrap text-left">
+                    <h2 class="section-heading">Related Shops</h2>
+                </div>
+                <div class="col-sm-4 col-xs-2 text-right">
+                    <a href="{{path('shops_index')}}" class="btn btn-ghost hidden-xs">Explore All  <i class="fa fa-chevron-right"></i></a>
+                    <a href="{{path('shops_index')}}" class="btn btn-ghost btn-icon-only visible-xs-block"><i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Product 1 -->
+                {% for rshop in relatedShops if rshop.id != shop.id %}
+
+                <div class="col-md-4 col-sm-6 col-xs-12" id="remove00{{rshop.id}}">
+                    <figure class="wow fadeIn">
+                        <img class="img-responsive" src="{{ asset('uploads/shops/') }}{{rshop.imageShops}}" alt="{{rshop.name}}">
+                        <figcaption class="text-center">
+                            {% if rshop.distance is null %}
+                            <a href="{{path('location_edit')}}">
+                                <h5 class="sub-title">{{ rshop.name }}</h5>
+                                <p class="small text-muted"> Please Change ur Current Location <i class="fa fa-pencil" aria-hidden="true"></i></p>
+                            </a>
+                            {% else %}
+                            <a href="{{ path('shops_show', { 'id': rshop.id }) }}">
+                                <h4 class="sub-title">{{ rshop.name }}</h4>
+                                <div class="product-price" >{{rshop.distance}} <small>Km</small> </div>
+                             </a>
+                                <br>
+                                <div class="btn-group">
+                                    <button class=" btn-sm btn-primary dislike" id="{{rshop.id}}">Dislike</button>
+                                    <button class=" btn-sm btn-default like" id="{{rshop.id}}" >Like</button>
+                                </div>
+                            
+                           {% endif %}
+                        </figcaption>
+                    </figure>
+                </div>
+                {% else %}
+                             
+                <div class="col-md-12 col-sm-12 col-xs-12 mix all" data-my-order="0"  data-infinite-scroll='{ "path": ".pagination__next", "append": ".post", "history": false }'>
+                        <div class="well">no Rlated shops found</div>
+                </div>
+                {% endfor %}
+                <!-- /Product 1 -->
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript">
+
+
+$(document).ready(function() {
+
+    $.each($(".dislike,.like"), function(){
+        
+            
+        $(this).on("click", function(){
+            var text = $(this).text();
+            var id = $(this).attr('id');
+
+                if (text != "" && id != "") {
+                    $.ajax({
+                        url: "{{ path('like_or_dislike') }}",
+                        data: {id: id,text:text},
+                        method: "POST",
+                        // error: function(data) { alert(data); },
+                        success: function(data) { 
+                            // alert(data)
+                            $("#remove00"+data+"").fadeOut(300, function() { $(this).remove(); });
+                        }
+                    });
+                }
+        });
+
+                    
+    });
+
+});
+
+
+</script>    
+
+
+{% endblock %}

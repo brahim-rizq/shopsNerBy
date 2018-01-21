@@ -1,0 +1,566 @@
+/*  Hero Area  */
+
+.hero-area {
+    padding: 0px;
+}
+.promotion-area-1 {
+    margin-bottom: 30px;
+}
+.promotion-area-1,
+.promotion-area-2 {
+    padding: 0px 15px;
+}
+.offer-slider img,
+.promotion-area-1 img,
+.promotion-area-2 img {
+    height: 100%;
+    border: 2px solid #efefef;
+}
+.promotion-content {
+    position: absolute;
+    width: 60%;
+    top: 20%;
+    left: 40px;
+}
+.promotion-content h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.promotion-area-2 .promotion-content {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    left: 0px;
+    padding: 0px 20px;
+}
+.promotion-area-2 .promotion-content h6 {
+    color: #fff;
+    opacity: .7;
+}
+.promotion-area-2 img {
+    border-color: transparent;
+}
+/*  Responsive CSS  */
+/* Tablet Landscape */
+
+@media (max-width: 1040px) {
+    .offer-slider img,
+    .promotion-area-1 img,
+    .promotion-area-2 img {
+        height: auto;
+    }
+}
+/*  Responsive CSS  */
+/*  Large Desktop CSS  */
+
+@media (min-width: 1460px) {
+    .offer-slider .owl-item .item {
+        height: 720px;
+    }
+    .promotion-area-1,
+    .promotion-area-2 {
+        height: 345px;
+    }
+}
+/*  Laptop & Desktop CSS  */
+
+@media (max-width: 1460px) {
+    .offer-slider .owl-item .item {
+        height: 520px;
+    }
+    .promotion-area-1,
+    .promotion-area-2 {
+        height: 245px;
+    }
+}
+/*  Tablet Landscape CSS  */
+
+@media (max-width: 1040px) and (min-width: 970px) {
+    .offer-slider .owl-item .item,
+    .promotion-area-1,
+    .promotion-area-2,
+    .offer-slider img,
+    .promotion-area-1 img,
+    .promotion-area-2 img {
+        height: auto;
+    }
+    .offer-slider .owl-item .item,
+    .promotion-area-1,
+    .promotion-area-2 {
+        margin-bottom: 30px;
+    }
+}
+/*  Tablet Portrait CSS  */
+
+@media (max-width: 970px) {
+    .offer-slider,
+    .promotion-area-1,
+    .promotion-area-2 {
+        margin-bottom: 30px;
+    }
+    .offer-slider .owl-item .item,
+    .promotion-area-1,
+    .promotion-area-2,
+    .offer-slider img,
+    .promotion-area-1 img,
+    .promotion-area-2 img {
+        height: auto;
+    }
+    .promotion-content {
+        top: 35%;
+    }
+}
+/*  Phone Portrait CSS  */
+
+@media (max-width: 490px) {
+    .promotion-content {
+        top: 15%;
+        left: 30px;
+    }
+}
+/*  Phone Portrait CSS  */
+
+@media (max-width: 400px) {
+    .promotion-content {
+        top: 10%;
+    }
+    .promotion-content h3 {
+        font-size: 20px;
+        margin: 5px;
+    }
+    .promotion-content h6 {
+        margin: 0px;
+    }
+}
+/*  Promotion Slider  */
+
+#owl-offer-slider .item img {
+    display: block;
+}
+#owl-offer-slider .owl-buttons {
+    display: none;
+}
+#owl-offer-slider.owl-theme .owl-controls {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+#owl-offer-slider.owl-theme .owl-controls .owl-page.active span {
+    background-color: #262C30;
+    width: 20px;
+    height: 20px;
+    margin: 0px 7px;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#owl-offer-slider.owl-theme .owl-controls .owl-page:hover span {
+    background-color: #262C30;
+}
+#owl-offer-slider .owl-carousel-content {
+    position: absolute;
+    bottom: 120px;
+    width: 60%;
+    padding-left: 30px;
+}
+#owl-offer-slider .owl-carousel-content .btn {
+    margin-top: 20px;
+}
+/*  Responsive CSS  */
+/*  Tablet landscape CSS  */
+
+@media (max-width: 1040px) {
+    #owl-offer-slider.owl-theme .owl-controls {
+        bottom: 50px;
+    }
+}
+/*  Tablet Portrait CSS  */
+
+@media (max-width: 770px) {
+    #owl-offer-slider.owl-theme .owl-controls {
+        bottom: 20px;
+    }
+    #owl-offer-slider .owl-carousel-content {
+        bottom: 70px;
+    }
+    #owl-offer-slider .owl-carousel-content h2 {
+        margin-top: 0px;
+    }
+}
+/*  Phone Portrait CSS  */
+
+@media (max-width: 670px) {
+    #owl-offer-slider .owl-carousel-content h5 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    #owl-offer-slider .owl-carousel-content h2 {
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+    #owl-offer-slider .owl-carousel-content p {
+        font-size: 14px;
+    }
+    #owl-offer-slider .owl-carousel-content .btn {
+        padding: 8px 16px;
+        margin-top: 12px;
+        font-size: 14px;
+    }
+}
+/*  Phone Portrait CSS  */
+
+@media (max-width: 490px) {
+    #owl-offer-slider .owl-carousel-content h5 {
+        font-size: 12px;
+        margin: 0px;
+    }
+    #owl-offer-slider .owl-carousel-content h2 {
+        font-size: 24px;
+    }
+    #owl-offer-slider .owl-carousel-content p {
+        display: none;
+    }
+    #owl-offer-slider .owl-carousel-content .btn {
+        margin-top: 7px;
+    }
+}
+/*  Phone Portrait CSS  */
+
+@media (max-width: 400px) {
+    #owl-offer-slider .owl-carousel-content {
+        padding-left: 15px;
+        width: 90%;
+        bottom: 35px;
+    }
+    #owl-offer-slider .owl-carousel-content .btn {
+        font-size: 12px;
+        margin-top: 0px;
+    }
+    #owl-offer-slider.owl-theme .owl-controls {
+        bottom: 10px;
+        right: -50%;
+    }
+}
+/*  Featured Products  */
+
+#featured-products {
+    padding-bottom: 0px;
+}
+#featured-products a {
+    color: #262C30;
+}
+#featured-products figure {
+    margin-bottom: 30px;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#featured-products figure:hover {
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#featured-products figure figcaption {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.01);
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#featured-products figure:hover figcaption {
+    background: rgba(0, 0, 0, 0.0);
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#featured-products figure .product-price del {
+    opacity: .5;
+}
+#featured-products figure .product-price .promo-price {
+    margin-left: 20px;
+    color: #e53935;
+}
+/*  Call to action 2 Area  */
+
+.call-to-action-2 {
+    margin-top: 60px;
+    background: #262C30;
+    padding: 70px;
+    color: #fff;
+}
+.call-to-action-2 .header-heading {
+    margin-bottom: 25px;
+    font-size: 62px;
+    font-weight: 100;
+    line-height: 72px;
+}
+.call-to-action-2 .btn {
+    margin-top: 10px;
+}
+/* Tablet Landscape */
+/*  Responsive CSS  */
+/*  Tablet Landscape CSS  */
+
+@media (max-width: 1040px) {
+    /* CSS for CTA */
+    
+    .call-to-action-2 .header-heading {
+        font-size: 36px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        line-height: 40px;
+    }
+}
+/* Phone Portrait */
+
+@media (max-width: 670px) {
+    /* CSS for CTA */
+    
+    .call-to-action-2 .header-text .header-heading {
+        font-size: 42px;
+    }
+}
+@media (max-width: 490px) {
+    /* CSS for promo product & mobile app CTA */
+    
+    .call-to-action-2 .header-text .header-heading {
+        font-size: 36px;
+    }
+}
+/* Promo Product Section */
+
+#exclusive-promo {
+    padding: 0px;
+}
+/* section content promo products & exclusive product large blocks */
+
+#exclusive-promo figure a {
+    color: #262C30;
+}
+#exclusive-promo figure figcaption {
+    max-width: 65%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    padding-left: 7%;
+    padding-top: 35%;
+}
+#exclusive-promo figure figcaption .product-title {
+    margin-bottom: 25px;
+    font-size: 62px;
+    font-weight: 100;
+    line-height: 50px;
+}
+#exclusive-promo figure figcaption p {
+    font-size: 20px;
+    line-height: 28px;
+    opacity: .5;
+    margin-bottom: 30px;
+}
+/* Sections Responsive CSS */
+/* Laptop & Desktop */
+
+@media (max-width: 1460px) {
+    #exclusive-promo figure figcaption {
+        padding-top: 22%;
+    }
+    #exclusive-promo figure figcaption .product-title {
+        font-size: 48px;
+        line-height: 40px;
+    }
+}
+/* Tablet Landscape */
+
+@media (max-width: 1040px) {
+    /* CSS for promo product, exclusive product large blocks & mobile app CTA */
+    
+    #exclusive-promo figure figcaption {
+        padding-top: 25%;
+    }
+    #exclusive-promo figure figcaption .product-title {
+        font-size: 36px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        line-height: 40px;
+    }
+    #exclusive-promo figure figcaption p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+/* Phone Portrait */
+
+@media (max-width: 670px) {
+    /* CSS for promo product & mobile app CTA */
+    
+    #exclusive-promo figure figcaption {
+        padding-top: 30%;
+    }
+    #exclusive-promo figure figcaption .product-title {
+        font-size: 42px;
+    }
+}
+@media (max-width: 490px) {
+    /* CSS for promo product & mobile app CTA */
+    
+    #exclusive-promo figure figcaption .product-title {
+        font-size: 26px;
+        margin-bottom: 0px;
+        font-weight: 300;
+    }
+    #exclusive-promo figure figcaption p {
+        margin-bottom: 20px;
+    }
+    #exclusive-promo figure figcaption p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    #exclusive-promo figure figcaption {
+        padding-top: 15%;
+    }
+}
+@media (max-width: 400px) {
+    #exclusive-promo figure figcaption p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+/*  Call to Action  */
+
+#call-to-action {
+    background: url("../img/hero-6.jpg") no-repeat transparent;
+    background-size: cover;
+    background-position: center;
+    padding: 160px 0px;
+    min-height: 720px;
+}
+#call-to-action .header-text .header-heading {
+    margin-bottom: 25px;
+    font-size: 62px;
+    font-weight: 100;
+    line-height: 72px;
+}
+#call-to-action .header-text p {
+    font-size: 20px;
+    line-height: 28px;
+    opacity: .5;
+    margin-bottom: 30px;
+}
+/* Responsive css for CTA Area 1 */
+/* Tablet Landscape */
+
+@media (max-width: 1040px) {
+    #call-to-action .header-text .header-heading {
+        font-size: 48px;
+        line-height: 52px;
+    }
+}
+/* Phone Portrait */
+
+@media (max-width: 480px) {
+    .call-to-action-2 .header-heading {
+        font-size: 36px;
+        line-height: 42px;
+    }
+}
+/* Trending Products  */
+
+#owl-trending-products.owl-theme .owl-controls {
+    margin-top: 30px;
+}
+#owl-trending-products.owl-theme .owl-controls .owl-page.active span {
+    background-color: #262C30;
+    width: 20px;
+    height: 20px;
+    margin: 0px 7px;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#owl-trending-products.owl-theme .owl-controls .owl-page:hover span {
+    background-color: #262C30;
+}
+#owl-trending-products .item {
+    margin: 0px 15px;
+}
+#owl-trending-products .item img {
+    display: block;
+}
+#owl-trending-products a {
+    color: #262C30;
+}
+#owl-trending-products.owl-carousel .owl-wrapper-outer {
+    overflow: visible;
+}
+#owl-trending-products figure {
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#owl-trending-products figure:hover {
+    cursor: pointer;
+    z-index: 999;
+    position: relative;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#owl-trending-products figure figcaption {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#owl-trending-products figure:hover figcaption {
+    background: rgba(255, 255, 255, 0.95);
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#owl-trending-products figure .product-price del {
+    opacity: .5;
+}
+#owl-trending-products figure .product-price .promo-price {
+    margin-left: 20px;
+    color: #e53935;
+}
+#owl-trending-products .product-details {
+    display: none;
+}
+#owl-trending-products figure:hover figcaption .product-details {
+    display: block;
+    font-size: 14px;
+    line-height: 22px;
+}

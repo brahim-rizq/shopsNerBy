@@ -1,0 +1,14 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block headerCrumb %}
+    <a class="header-title" href="#" title="reset">Confirmation</a>
+{% endblock %}
+{% block fos_user_content %}
+<div class="col-md-8 col-md-offset-2">
+<div class="well ">
+{{ 'resetting.check_email'|trans({'%tokenLifetime%': tokenLifetime})|nl2br }}
+</div>
+</div>
+{% endblock %}

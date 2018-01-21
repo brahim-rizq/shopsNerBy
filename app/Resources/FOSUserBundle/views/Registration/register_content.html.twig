@@ -1,0 +1,11 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<h4 class="text-center">{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}</h4><hr>
+{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'Shops_nearby'}}) }}
+    {{ form_widget(form) }}
+    <div>
+        <input class="btn btn-sm btn-primary" type="submit" value="{{ 'registration.submit'|trans }}" />
+    </div>
+{{ form_end(form) }}
+<br>
+<p>U already have an account  <a class="header-title" href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a></p>

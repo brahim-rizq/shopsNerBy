@@ -1,0 +1,130 @@
+{% extends 'shops.html.twig' %}
+
+
+    {% block breadCrumb %}
+        <header class="hero-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="header-title">List Shops</h2>
+                    </div>
+                </div>
+            </div>
+        </header>
+    {% endblock %}
+{% block content %}
+
+    <section id="products-list">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="product-filters col-sm-12">
+                        <a class="filter btn" data-filter="all">all</a>
+                        {% if shops is not empty %}
+                            {% for category in categories %}
+                                {% if category.status == 1 %}
+                                    <a class="filter btn" data-filter=".{{category.name}}">{{category.name}}</a>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <div id="product-item">
+                        {% for shop in shops| sortbyfield('distance') %}
+                            <!-- Product 1 -->
+                           
+                            <div class="col-md-4 col-sm-6 col-xs-12 scroll mix {{shop.category.name}}" data-my-order="000{{shop.id}}"  data-infinite-scroll='{ "path": ".pagination__next", "append": ".post", "history": false }'>
+                                <figure class="wow fadeIn">
+                                    <img class="img-responsive" style="max-height: 280px;width: 100%;" src="{{asset('uploads/shops/')}}{{shop.imageShops}}" alt="themesnerd">
+                                    <figcaption>
+                                        {% if shop.distance is null %}
+                                        <a href="{{path('location_edit')}}">
+                                            <p class="product-title">{{ shop.name }}</p>
+                                            <p class="small text-muted"> Please Change ur Current Location <i class="fa fa-pencil" aria-hidden="true"></i></p>
+                                        </a>
+                                        {% else %}
+                                        <a href="{{ path('shops_show', { 'id': shop.id }) }}">
+                                            <p class="product-title">{{ shop.name }}</p>
+                                            <div class="product-price" >{{shop.distance}} <small>Km</small> </div>
+                                         </a>
+                                            <br>
+                                            <div class="btn-group">
+                                                <button class=" btn-sm btn-primary dislike" id="{{shop.id}}">Dislike</button>
+                                                <button class=" btn-sm btn-default like" id="{{shop.id}}" >Like</button>
+                                            </div>
+                                        
+                                       {% endif %}
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            {% else %}
+                             
+                            <div class="col-md-12 col-sm-12 col-xs-12 mix all" >
+                                    <div class="well">no shop found</div>
+                            </div>
+                            
+                            <!-- /Product 1 -->       
+                        {% endfor %}
+
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h4 class="text-center text-info">Ctegories</h4><hr>
+                    {% for category in categories %}
+                        {% if category.status == 0 %}
+                            <a style="cursor: pointer;" class="filter exclusive" data-filter=".{{category.name}}"><i class="fa fa-tag" aria-hidden="true"></i> {{category.name}}</a> ,
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- Pagination -->
+            
+            <!-- /Pagination -->
+        </div>
+        <!-- <p class="totop"> 
+            <a href="#top">Back to top</a> 
+        </p>
+ -->    </section>
+
+
+{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript">
+
+
+$(document).ready(function() {
+
+    $.each($(".dislike,.like"), function(){
+        
+            
+        $(this).on("click", function(){
+            var text = $(this).text();
+            var id = $(this).attr('id');
+
+                if (text != "" && id != "") {
+                    $.ajax({
+                        url: "{{ path('like_or_dislike') }}",
+                        data: {id: id,text:text},
+                        method: "POST",
+                        // error: function(data) { alert(data); },
+                        success: function(data) { 
+                            // alert(data)
+                            $("[data-my-order=000"+data+"]").fadeOut(300, function() { $(this).remove(); });
+                        }
+                    });
+                }
+        });
+
+                    
+    });
+
+});
+
+
+</script>    
+
+
+{% endblock %}

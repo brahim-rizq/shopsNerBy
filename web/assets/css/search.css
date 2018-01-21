@@ -1,0 +1,289 @@
+/* Header Section */
+
+header.hero-area {
+    background: #f5f5f5;
+    padding-top: 170px;
+    padding-bottom: 50px;
+}
+.hero-area .header-title {
+    font-size: 62px;
+    font-weight: 100;
+    line-height: 50px;
+}
+/* Section Products CSS */
+
+#search-products figure figcaption a {
+    color: #262C30;
+}
+#search-products figure {
+    margin-bottom: 30px;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#search-products figure:hover {
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#search-products figure figcaption {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.01);
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#search-products figure:hover figcaption {
+    background: rgba(0, 0, 0, 0.0);
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#search-products figure .product-price del {
+    opacity: .5;
+}
+#search-products figure .product-price .promo-price {
+    margin-left: 20px;
+    color: #e53935;
+}
+/* Section Responsive CSS */
+/*  Tablet Portrait  */
+
+@media (max-width: 970px) {
+    .product-filters {
+        text-align: center;
+    }
+}
+/*  Pagination  */
+
+.pagination .prev a,
+.pagination .next a {
+    text-transform: uppercase;
+    border-radius: 50px !important;
+    border: 1px solid #262C30;
+    background: #fff;
+    color: #262C30;
+    padding: 10px 20px;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+.pagination .prev a.disable,
+.pagination .next a.disable {
+    opacity: .7;
+    color: #8c8c8c;
+    border: 1px solid #8c8c8c;
+}
+.pagination .prev a:hover,
+.pagination .prev a:focus,
+.pagination .prev a:active,
+.pagination .next a:hover,
+.pagination .next a:focus,
+.pagination .next a:active {
+    background: #fff;
+    color: #262C30;
+    border: 1px solid transparent;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+.pagination .prev a.disable:hover,
+.pagination .prev a.disable:focus,
+.pagination .prev a.disable:active,
+.pagination .next a.disable:hover,
+.pagination .next a.disable:focus,
+.pagination .next a.disable:active {
+    background: transparent;
+    opacity: .7;
+    color: #8c8c8c;
+    border: 1px solid #8c8c8c;
+    box-shadow: none;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+.pagination-number > li > a,
+.pagination-number > li > span {
+    opacity: .7;
+    color: #8c8c8c;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border: 1px solid transparent;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+.pagination-number > li > a:hover,
+.pagination-number > li > span:hover,
+.pagination-number > .active > a,
+.pagination-number > .active > span,
+.pagination-number > .active > a:hover,
+.pagination-number > .active > span:hover,
+.pagination-number > .active > a:focus,
+.pagination-number > .active > span:focus {
+    border-radius: 50px !important;
+    background: #262C30;
+    color: #fff;
+    margin: 0px 1px;
+    border-color: transparent;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#search-products .pagination {
+    margin: 30px 20px;
+}
+/* Related Product CSS */
+
+#related-products {
+    background: #F9F9F9;
+}
+#related-products .section-heading-wrap {
+    margin-bottom: 30px;
+}
+#related-products .btn-ghost {
+    margin-top: 15px;
+}
+#related-products .btn-ghost .fa {
+    margin: 0px;
+}
+#related-products a {
+    color: #262C30;
+}
+#related-products figure {
+    margin-bottom: 30px;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#related-products figure:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#related-products figure figcaption {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.01);
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#related-products figure:hover figcaption {
+    background: rgba(0, 0, 0, 0.0);
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#related-products .product-price del {
+    opacity: .5;
+    margin-right: 20px;
+}
+#related-products .promo-price {
+    color: #e53935;
+}
+/*  Call to Action  */
+
+#call-to-action {
+    background: url("../img/hero-6.jpg") no-repeat transparent;
+    background-size: cover;
+    background-position: top center;
+    padding: 160px 0px;
+    min-height: 720px;
+}
+#call-to-action .header-text .header-heading {
+    margin-bottom: 25px;
+    font-size: 62px;
+    font-weight: 100;
+    line-height: 62px;
+}
+#call-to-action .header-text p {
+    font-size: 20px;
+    line-height: 28px;
+    opacity: .5;
+    margin-bottom: 30px;
+}
+/* Sections Responsive CSS */
+/* Laptop & Desktop */
+
+@media (max-width: 1460px) {}
+/* Tablet Landscape */
+
+@media (max-width: 1040px) {
+    /* CSS for promo product, exclusive product large blocks & mobile app CTA */
+    
+    #call-to-action .header-text .header-heading {
+        font-size: 36px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        line-height: 40px;
+    }
+    #call-to-action .header-text p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+/* Phone Portrait */
+
+@media (max-width: 670px) {
+    /* CSS for promo product & mobile app CTA */
+    
+    #call-to-action .header-text .header-heading {
+        font-size: 42px;
+    }
+}
+@media (max-width: 490px) {
+    /* CSS for promo product & mobile app CTA */
+    
+    #call-to-action .header-text .header-heading {
+        font-size: 36px;
+    }
+    #call-to-action .header-text p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+@media (max-width: 400px) {
+    #call-to-action .header-text p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}

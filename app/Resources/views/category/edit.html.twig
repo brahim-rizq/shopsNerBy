@@ -1,0 +1,39 @@
+{% extends 'shops.html.twig' %}
+
+
+    {% block breadCrumb %}
+        <header class="hero-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="header-title">Edit Category</h2>
+                    </div>
+                </div>
+            </div>
+        </header>
+    {% endblock %}
+
+
+{% block content %}
+<section>
+    <div class="container">
+        <div class="col-md-4 col-md-offset-4">
+            
+            {{ form_start(edit_form) }}
+            <h4 class="text-center text-info">Edit Category {{category.name}}</h4><hr>
+                {{ form_widget(edit_form) }}
+                    <div class="">
+                        <input class="btn btn-sm btn-primary" type="submit" value="Edit" />
+                        <a class="btn btn-sm btn-default pull-right" href="{{ path('category_index') }}" title=" profile">Cancel</a>
+                    </div>
+            {{ form_end(edit_form) }}
+            <div class="text-center">
+                {{ form_start(delete_form) }}
+                    <input class="btn btn-outline btn-sm" type="submit" value="Delete">
+                {{ form_end(delete_form) }}
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

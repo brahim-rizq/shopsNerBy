@@ -1,0 +1,62 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<h4 class="text-center">Edit Profile</h4><hr>
+{{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
+    
+	<div class="col-md-6">
+		<h4 class="text-info text-center"> Account info</h4><hr>
+		<div class="form-group">
+		 <label for="Username">Username</label>
+            {{ form_widget(form.username, {'attr': {'id':'Username'}})  }}     
+        </div>
+        <div class="form-group">
+		 <label for="Email">Email</label>
+            {{ form_widget(form.email, {'attr': {'id':'Email'}})  }}     
+        </div>
+        <div class="form-group">
+		 <label for="FirstName">FirstName</label>
+            {{ form_widget(form.Userinfo.firstname, {'attr': {'id':'FirstName'}})  }}     
+        </div>
+        <div class="form-group">
+		 <label for="LastName">LastName</label>
+            {{ form_widget(form.Userinfo.lastname, {'attr': {'id':'LastName'}})  }}     
+        </div>
+        
+        
+	</div>
+	<div class="col-md-6">
+		<h4 class="text-info text-center">Address info</h4><hr>
+		    <div class="form-group">
+		    <label for="Phone Number">Phone Number</label>
+            {{ form_widget(form.Userinfo.phone, {'attr': {'id':'Phone Number'}})  }}     
+        </div>
+        <div class="form-group">
+        <label for="CIN">CIN</label>
+            {{ form_widget(form.Userinfo.cin, {'attr': {'id':'CIN'}})  }}     
+        </div>
+        <div class="form-group">
+         <label for="Sex">Sex</label>
+            {{ form_widget(form.Userinfo.genre, {'attr': {'id':'Sex'}})  }}     
+        </div>
+		    <div class="form-group"><br>
+         <label for="BirthDay">BirthDay</label>
+            {{ form_widget(form.Userinfo.birthday, {'attr': {'id':'BirthDay'}})  }}     
+        </div>
+	</div>
+
+    <div class="col-md-12" style="margin-top: 50px;">
+        <div class="form-group">
+        <label for="Profile Picture">Profile Picture</label>
+            {{ form_widget(form.Userinfo.file, {'attr': {'id':'Profile Picture'}})  }}     
+        </div>
+    	<div class="form-group">
+		 <label for="Current password">Current password</label>
+            {{ form_widget(form.current_password, {'attr': {'id':'Current password'}})  }}     
+        </div>
+	
+		<div class="form-group">
+			<input type="submit" class="btn btn-sm btn-primary" value="{{ 'profile.edit.submit'|trans }}" />
+	        <a class="btn btn-sm btn-default pull-right" href="{{ path('fos_user_profile_show') }}" title=" profile">Cancel</a>
+		</div>
+    </div>
+{{ form_end(form) }}

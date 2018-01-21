@@ -1,0 +1,675 @@
+/* Header Section */
+
+.hero-carousel-wrapper {
+    overflow: hidden;
+    min-height: 500px;
+}
+/* Owl Carousel */
+
+#owl-1,
+#owl-1 .owl-wrapper-outer,
+#owl-1 .owl-wrapper-outer .owl-wrapper,
+#owl-1 .owl-wrapper-outer .owl-wrapper .owl-item {
+    height: 100%;
+}
+/* Owl Carousel navigation */
+
+#owl-1 #bar {
+    width: 0%;
+    max-width: 100%;
+    height: 5px;
+    background: #262C30;
+}
+#owl-1 #progressBar {
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    bottom: 0px;
+    z-index: 300;
+}
+#owl-1 .owl-controls {
+    text-align: center;
+    position: relative;
+    z-index: 300;
+    top: -60px;
+}
+.owl-theme .owl-controls .owl-page span {
+    margin: 5px;
+    margin-top: -20px;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+.owl-theme .owl-controls .owl-page.active span {
+    width: 20px;
+    height: 20px;
+    margin-top: 0px;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+    background-color: #262C30;
+}
+.owl-theme .owl-controls .owl-page:hover span {
+    background-color: #262C30;
+}
+#owl-1 .item .item-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -0;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center top;
+}
+/* header text position */
+
+#owl-1 .item .header-text {
+    padding-top: 65%;
+}
+#owl-1 .slide-2 .header-text {
+    padding-top: 35%;
+}
+/* header text styles */
+
+#owl-1 .header-text .header-title {
+    margin-bottom: 25px;
+    font-size: 62px;
+    font-weight: 100;
+    line-height: 50px;
+}
+#owl-1 .header-text p {
+    font-size: 20px;
+    line-height: 28px;
+    opacity: .5;
+    margin-bottom: 30px;
+}
+/* Responsive CSS for hero */
+/* Laptop */
+
+@media (max-width: 1370px) {
+    #owl-1 .item .header-text {
+        padding-top: 55%;
+    }
+    #owl-1 .slide-2 .header-text {
+        padding-top: 30%;
+    }
+}
+/* Tablet Landscape */
+
+@media (max-width: 1040px) {
+    .hero-carousel-wrapper .owl-wrapper-outer {
+        top: 90px;
+    }
+    #owl-1 .item .item-img {
+        height: 100%;
+        width: 100%;
+        max-width: none;
+        position: absolute;
+        z-index: -0;
+    }
+    #owl-1 .item .header-text {
+        padding-top: 50%;
+    }
+    #owl-1 .slide-2 .header-text {
+        padding-top: 25%;
+    }
+    #owl-1 .header-text .header-title {
+        font-size: 56px;
+        line-height: 40px;
+    }
+    #owl-1 .header-text p {
+        font-size: 18px;
+    }
+}
+/* Tablet Portrait */
+
+@media (max-width: 970px) {
+    .hero-carousel-wrapper .owl-wrapper-outer {
+        top: 70px;
+    }
+    #owl-1 .item .header-text {
+        margin-top: 25%;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.35);
+        border-radius: 7px;
+        padding-bottom: 40px;
+        text-align: center;
+        transition: 0.3s all ease-in-out;
+        -webkit-transition: 0.3s all ease-in-out;
+        -moz-transition: 0.3s all ease-in-out;
+        -o-transition: 0.3s all ease-in-out;
+        -ms-transition: 0.3s all ease-in-out;
+    }
+    #owl-1 .item .header-text:hover {
+        background: rgba(255, 255, 255, 0.85);
+        transition: 0.3s all ease-in-out;
+        -webkit-transition: 0.3s all ease-in-out;
+        -moz-transition: 0.3s all ease-in-out;
+        -o-transition: 0.3s all ease-in-out;
+        -ms-transition: 0.3s all ease-in-out;
+    }
+    #owl-1 .header-text .header-title {
+        font-size: 48px;
+        line-height: 32px;
+    }
+    #owl-1 .header-text p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+/* Phone */
+
+@media (max-width: 670px) {
+    .hero-carousel-wrapper .owl-wrapper-outer {
+        top: 70px;
+    }
+    #owl-1 .item .header-text {
+        margin-top: 15%;
+    }
+    #owl-1 .header-text .header-title {
+        font-size: 36px;
+        line-height: 22px;
+    }
+}
+@media (max-width: 490px) {
+    #owl-1 .item .header-text {
+        margin-top: 5%;
+        padding: 15px;
+    }
+    #owl-1 .header-text .header-title {
+        font-size: 26px;
+        line-height: 2px;
+        font-weight: 300;
+    }
+    #owl-1 .header-text p {
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 400px) {
+    .hero-carousel-wrapper {
+        min-height: 420px;
+    }
+    #owl-1 .item .header-text {
+        margin-top: 10%;
+    }
+}
+/* Featured Products Tab */
+
+.nav-tabs {
+    border: 0px;
+}
+.nav-tabs > li > a {
+    color: #8c8c8c;
+    border: 0px;
+    border-radius: 0px;
+    background: transparent;
+    margin: 0px;
+    padding-left: 10px;
+    padding-right: 30px;
+    border-bottom: 1px solid #8c8c8c;
+    opacity: .7;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+.nav-tabs > li > a:hover {
+    background: transparent;
+    opacity: 1;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    color: #262C30;
+    border: 0px;
+    opacity: 1;
+    border-bottom: 5px solid #262C30;
+    background: transparent;
+    padding-left: 10px;
+    padding-right: 50px;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+/* We summarize all the product showcasing sections CSS here */
+/* Sections title wrap */
+
+#featured-products .nav-tabs,
+#trending-products .section-heading-wrap,
+#exclusive-products .section-heading-wrap {
+    margin-bottom: 30px;
+}
+/* Section Ghost Button */
+
+#featured-products .btn-ghost {
+    margin-top: 30px;
+}
+#trending-products .btn-ghost,
+#exclusive-products .btn-ghost {
+    margin-top: 15px;
+}
+#featured-products .btn-ghost .fa,
+#trending-products .btn-ghost .fa,
+#exclusive-products .btn-ghost .fa {
+    margin: 0px;
+}
+/* Section Products CSS */
+
+#featured-products figure,
+#trending-products figure,
+#exclusive-products .sec-sm {
+    margin-bottom: 30px;
+}
+#featured-products figure a,
+#trending-products figure a {
+    color: #262C30;
+}
+/* Image Hover effect is optional */
+
+#featured-products figure:hover img,
+#trending-products figure:hover img,
+#exclusive-products .sec-sm figure:hover img {
+    border: 1px solid #f5f5f5;
+}
+/* Small blocks in exclusive products section */
+
+#exclusive-products .sec-sm a {
+    color: #262C30;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    outline: 0;
+    font-weight: 700;
+}
+#exclusive-products .sec-sm figure figcaption {
+    position: relative;
+    padding-top: 12px;
+}
+#exclusive-products .sec-sm figure figcaption .product-title {
+    font-weight: 300;
+}
+/* Promo Product Section */
+
+#exclusive-promo {
+    padding: 0px;
+}
+/* section content promo products & exclusive product large blocks */
+
+#exclusive-promo figure a {
+    color: #262C30;
+}
+#exclusive-promo figure figcaption {
+    max-width: 65%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    padding-left: 7%;
+    padding-top: 35%;
+}
+#exclusive-promo figure figcaption .product-title {
+    margin-bottom: 25px;
+    font-size: 62px;
+    font-weight: 100;
+    line-height: 50px;
+}
+#exclusive-promo figure figcaption p {
+    font-size: 20px;
+    line-height: 28px;
+    opacity: .5;
+    margin-bottom: 30px;
+}
+/* CTA Area 1 */
+
+#cta-1 {
+    background: url("../img/hero-6.jpg") no-repeat transparent;
+    background-size: cover;
+    background-position: center;
+    padding: 160px 0px;
+}
+#cta-1 .header-text .header-heading {
+    margin-bottom: 25px;
+    font-size: 62px;
+    font-weight: 100;
+    line-height: 62px;
+}
+#cta-1 .header-text p {
+    font-size: 20px;
+    line-height: 28px;
+    opacity: .5;
+    margin-bottom: 30px;
+}
+/* Mobile App CTA */
+
+#mobile-app {
+    background: url("../img/app-back.jpg") no-repeat transparent;
+    background-size: cover;
+    background-position: center;
+}
+#mobile-app .header-text .header-heading {
+    margin-bottom: 25px;
+    font-size: 62px;
+    font-weight: 100;
+    line-height: 62px;
+}
+#mobile-app .header-text p {
+    font-size: 20px;
+    line-height: 28px;
+    opacity: .5;
+    margin-bottom: 30px;
+}
+#mobile-app .header-text a img {
+    height: 62px;
+    width: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+/* Sections Responsive CSS */
+/* Laptop & Desktop */
+
+@media (min-width: 1040px) {
+    /* Product Section Content & Hover Effect */
+    
+    #featured-products figure figcaption,
+    #trending-products figure figcaption {
+        background: rgba(255, 255, 255, 0.95);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 30px;
+        padding-top: 25%;
+        padding-right: 60px;
+        opacity: 0;
+        text-align: center;
+        transition: 0.3s all ease-in-out;
+        -webkit-transition: 0.3s all ease-in-out;
+        -moz-transition: 0.3s all ease-in-out;
+        -o-transition: 0.3s all ease-in-out;
+        -ms-transition: 0.3s all ease-in-out;
+    }
+    #featured-products figure:hover figcaption,
+    #trending-products figure:hover figcaption {
+        opacity: 1;
+        transition: 0.3s all ease-in-out;
+        -webkit-transition: 0.3s all ease-in-out;
+        -moz-transition: 0.3s all ease-in-out;
+        -o-transition: 0.3s all ease-in-out;
+        -ms-transition: 0.3s all ease-in-out;
+    }
+    #featured-products .product-icon .fa,
+    #trending-products .product-icon .fa {
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        background: #fff;
+        border-radius: 50%;
+        font-size: 36px;
+        padding: 16px;
+        border: 1px solid transparent;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 5%;
+    }
+}
+/* Laptop & Desktop */
+
+@media (max-width: 1460px) and (min-width: 1040px) {
+    /* Feature Product Icon */
+    
+    #featured-products .product-icon .fa {
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+        padding: 10px;
+    }
+    #featured-products figure figcaption,
+    #exclusive-products .sec-sm figure figcaption {
+        padding-top: 18%;
+    }
+}
+/* Laptop & Desktop */
+
+@media (max-width: 1460px) {
+    #exclusive-promo figure figcaption {
+        padding-top: 22%;
+    }
+    #exclusive-promo figure figcaption .product-title {
+        font-size: 48px;
+        line-height: 40px;
+    }
+}
+/* Tablet Landscape */
+
+@media (max-width: 1040px) {
+    /* Product Section Content */
+    
+    #featured-products figure figcaption,
+    #trending-products figure figcaption {
+        position: relative;
+        width: 100%;
+    }
+    #featured-products .product-icon,
+    #trending-products .product-icon {
+        position: absolute;
+        right: 10px;
+        top: -80px;
+        z-index: 50;
+    }
+    #featured-products .product-icon .fa,
+    #trending-products .product-icon .fa {
+        width: 42px;
+        height: 42px;
+        color: #fff;
+        background: #8c8c8c;
+        border-radius: 50%;
+        padding: 12px;
+        margin-top: 20px;
+        text-align: center;
+    }
+    #exclusive-products .sec-sm figure figcaption {
+        padding: 0px;
+        padding-top: 12px;
+    }
+    #exclusive-products .sec-sm figure figcaption .product-tag {
+        font-size: 12px;
+    }
+    #exclusive-products .sec-sm figure figcaption h4 {
+        font-size: 26px;
+        margin-top: 10px;
+    }
+    #exclusive-products .sec-sm figure figcaption .btn {
+        position: absolute;
+        float: right;
+        bottom: 130px;
+        right: 20px;
+    }
+    /* CSS for promo product, exclusive product large blocks & mobile app CTA */
+    
+    #exclusive-promo figure figcaption {
+        padding-top: 25%;
+    }
+    #exclusive-promo figure figcaption .product-title,
+    #mobile-app .header-text .header-heading,
+    #cta-1 .header-text .header-heading {
+        font-size: 36px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        line-height: 40px;
+    }
+    #exclusive-promo figure figcaption p,
+    #mobile-app .header-text p,
+    #cta-1 .header-text p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    #mobile-app .header-text a img {
+        height: 52px;
+    }
+}
+/* Tablet Portrait */
+
+@media (max-width: 970px) {
+    /* CSS for promo product, exclusive product large blocks & mobile app CTA */
+    
+    #mobile-app .header-text a img {
+        height: 46px;
+    }
+}
+/* Phone Portrait */
+
+@media (max-width: 670px) {
+    #featured-products .btn-ghost,
+    #trending-products .btn-ghost,
+    #exclusive-products .btn-ghost {
+        padding: 12px;
+        width: 48px;
+        height: 48px;
+    }
+    #featured-products .section-heading,
+    #trending-products .section-heading,
+    #exclusive-products .section-heading {
+        font-size: 24px;
+    }
+    /* CSS for promo product & mobile app CTA */
+    
+    #exclusive-promo figure figcaption {
+        padding-top: 30%;
+    }
+    #exclusive-promo figure figcaption .product-title,
+    #mobile-app .header-text .header-heading,
+    #cta-1 .header-text .header-heading {
+        font-size: 42px;
+    }
+}
+@media (max-width: 490px) {
+    /* CSS for promo product & mobile app CTA */
+    
+    #exclusive-promo figure figcaption .product-title {
+        font-size: 26px;
+        margin-bottom: 0px;
+        font-weight: 300;
+    }
+    #mobile-app .header-text .header-heading,
+    #cta-1 .header-text .header-heading {
+        font-size: 36px;
+    }
+    #exclusive-promo figure figcaption p {
+        margin-bottom: 20px;
+    }
+    #featured-products figure figcaption p,
+    #trending-products figure figcaption p,
+    #exclusive-promo figure figcaption p,
+    #mobile-app .header-text p,
+    #cta-1 .header-text p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    #exclusive-promo figure figcaption {
+        padding-top: 15%;
+    }
+}
+@media (max-width: 400px) {
+    #featured-products figure figcaption p,
+    #trending-products figure figcaption p,
+    #exclusive-promo figure figcaption p,
+    #mobile-app .header-text p,
+    #cta-1 .header-text p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+/* OWL Carosel 2 */
+
+#owl-2 .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#owl-2 .owl-buttons {
+    display: none;
+}
+#owl-2 .owl-pagination {
+    position: relative;
+    z-index: 999;
+    bottom: 30px;
+    right: 20px;
+    float: right;
+}
+#owl-2 .carousel-content {
+    padding-top: 20px;
+}
+#owl-2 .carousel-content .product-title {
+    font-size: 62px;
+    font-weight: 100;
+    line-height: 50px;
+}
+#owl-2 .carousel-content p {
+    font-size: 20px;
+    line-height: 28px;
+    opacity: .5;
+    margin-bottom: 30px;
+}
+#owl-2 .carousel-content a {
+    color: #262C30;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    outline: 0;
+    font-weight: 700;
+}
+/* Responsive */
+/* Tablet Landscape */
+
+@media (max-width: 1040px) {
+    #owl-2 {
+        margin-bottom: 30px;
+    }
+    #owl-2 .carousel-content .product-title {
+        font-size: 48px;
+        margin-top: 10px;
+        line-height: 52px;
+    }
+    #owl-2 .carousel-content p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+/* Tablet Portrait */
+
+@media (max-width: 970px) {
+    #owl-2 .carousel-content .product-title {
+        font-size: 42px;
+        line-height: 46px;
+    }
+}
+/* Phone */
+
+@media (max-width: 670px) {
+    #owl-2 .carousel-content .product-title {
+        font-size: 36px;
+        line-height: 42px;
+    }
+    #owl-2 .carousel-content p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+@media (max-width: 490px) {
+    #owl-2 .carousel-content .product-title {
+        font-size: 26px;
+        line-height: 32px;
+        font-weight: 300;
+    }
+    #owl-2 .carousel-content p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}

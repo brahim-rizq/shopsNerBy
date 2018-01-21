@@ -1,0 +1,48 @@
+{% extends 'shops.html.twig' %}
+
+    {% block breadCrumb %}
+        <header class="hero-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="header-title">Under development</h2>
+                    </div>
+                </div>
+            </div>
+        </header>
+    {% endblock %}
+
+
+{% block stylesheets %}
+        <link href="{{asset('assets/')}}css/underdev.css" rel="stylesheet">
+
+{% endblock %}
+{% block content %}
+
+    <!-- Header Section -->
+    <header class="hero-area">
+        <div class="container-fluid no-padding">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="section-content">
+                        <h3 class="text-error">Ops!</h3>
+                        <h2 class="header-title">Under development</h2>
+                        <p>This page is under development. Explore our Shops.</p>
+                        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        <a href="{{path('shops_index')}}" class="btn">Explore  <i class="fa fa-chevron-right"></i></a>
+                        {% else %}
+                        <a href="{{path('all_shops')}}" class="btn">Explore  <i class="fa fa-chevron-right"></i></a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="section-img">
+                        <img class="img-responsive" src="{{asset('assets/')}}img/shop.png" alt="shop">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /Header Section -->
+
+{% endblock %}

@@ -1,0 +1,79 @@
+/*  Hero Area  */
+
+header.hero-area {
+    background: #ececec;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+header.hero-area img {
+    width: 100%;
+}
+header.hero-area .section-content {
+    padding-top: 220px;
+    padding-bottom: 120px;
+    padding-left: 12%;
+}
+.hero-area .header-title {
+    font-size: 62px;
+    font-weight: 100;
+    margin-top: 50px;
+    line-height: 62px;
+}
+.hero-area p {
+    font-size: 20px;
+    line-height: 28px;
+    opacity: .5;
+    margin: 30px auto;
+}
+@media (max-width: 1450px) {
+    header.hero-area {
+        padding-bottom: 0px;
+    }
+    header.hero-area .section-content {
+        padding-top: 140px;
+        padding-bottom: 100px;
+    }
+}
+@media (max-width: 970px) {
+    header.hero-area .section-content {
+        padding-top: 120px;
+        padding-bottom: 60px;
+        padding-left: 0px;
+        text-align: center;
+    }
+    .hero-area .header-title {
+        font-size: 48px;
+        line-height: 40px;
+    }
+    .hero-area p {
+        font-size: 16px;
+    }
+}
+/*--   Counter   --*/
+
+.hero-area .countdown {
+    color: #262C30;
+    position: relative;
+}
+.hero-area .countdown span {
+    position: relative;
+    float: left;
+    margin: 0px 2%;
+    width: 20%;
+    padding: 2rem;
+    padding-left: 0px;
+    background: transparent;
+}
+.hero-area .countdown span h2 {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+.hero-area .countdown span p {
+    margin: 0px;
+    color: #8c8c8c;
+}
+@media (min-width: 1030px) {
+    .hero-area .countdown {
+        width: 80%;
+    }
+}

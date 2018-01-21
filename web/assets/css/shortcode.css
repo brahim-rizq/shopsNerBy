@@ -1,0 +1,451 @@
+/*  Hero Area  */
+
+header.hero-area {
+    background: #f5f5f5;
+    padding-top: 170px;
+    padding-bottom: 50px;
+}
+.hero-area .header-title {
+    font-size: 62px;
+    font-weight: 100;
+    line-height: 50px;
+}
+/*  Responsive CSS for Hero Area  */
+/*  Tablet Portrait  */
+
+@media (max-width: 970px) {
+    header.hero-area {
+        padding-top: 130px;
+        padding-bottom: 30px;
+    }
+    .hero-area .header-title {
+        font-size: 48px;
+        line-height: 40px;
+    }
+}
+/*  Typhography  */
+
+.typhography {
+    background: #ffffff;
+}
+.font-family-2 {
+    font-family: 'Open Sans', sans-serif;
+}
+.font-family-1 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+.font-weight-100 {
+    font-weight: 100;
+}
+.font-weight-200 {
+    font-weight: 200;
+}
+.font-weight-300 {
+    font-weight: 300;
+}
+.font-weight-400 {
+    font-weight: 400;
+}
+.font-weight-500 {
+    font-weight: 500;
+}
+.font-weight-600 {
+    font-weight: 600;
+}
+.font-weight-700 {
+    font-weight: 700;
+}
+.font-weight-800 {
+    font-weight: 800;
+}
+.font-weight-900 {
+    font-weight: 900;
+}
+/*--   Button Area   --*/
+
+.btn-area {
+    background: #efefef;
+}
+.btn-area .btn {
+    margin: 15px;
+}
+.btn-area .section-title {
+    margin-top: 60px;
+}
+.social-btn .btn {
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.btn.facebook {
+    color: #3B5999;
+    border-color: #3B5999;
+}
+.bg-facebook,
+.social-btn .facebook:hover {
+    background: #3B5999;
+}
+.btn.twitter {
+    color: #00ABF1;
+    border-color: #00ABF1;
+}
+.bg-twitter,
+.social-btn .twitter:hover {
+    background: #00ABF1;
+}
+.btn.google {
+    color: #E12F2F;
+    border-color: #E12F2F;
+}
+.bg-google,
+.social-btn .google:hover {
+    background: #E12F2F;
+}
+.btn.linkedin {
+    color: #007BB6;
+    border-color: #007BB6;
+}
+.bg-linkedin,
+.social-btn .linkedin:hover {
+    background: #007BB6;
+}
+.btn.bg-facebook,
+.btn.facebook:hover,
+.btn.bg-twitter,
+.btn.twitter:hover,
+.btn.bg-google,
+.btn.google:hover,
+.btn.bg-linkedin,
+.btn.linkedin:hover{
+    color: #ffffff;
+}
+
+/*  Accordion  */
+
+#accordion-section {
+    background: #ffffff;
+}
+/* Style the buttons that are used to open and close the accordion panel */
+
+#accordion-section button.accordion {
+    background-color: transparent;
+    color: #262C30;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    border: 1px solid #efefef;
+    transition: 0.4s;
+    margin-top: -1px;
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+#accordion-section button.accordion.active,
+button.accordion:hover {
+    background-color: #efefef !important;
+    border: 1px solid #efefef;
+    transition: 0.4s;
+}
+/* Style the accordion panel. Note: hidden by default */
+
+#accordion-section div.panel {
+    padding: 0 18px;
+    background-color: transparent;
+    display: none;
+}
+/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
+
+#accordion-section div.panel.show {
+    display: block !important;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#accordion-section div.panel {
+    padding: 0 18px;
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin: 0px;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+#accordion-section div.panel.show {
+    opacity: 1;
+    max-height: 500px;
+    /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+    
+    padding: 2rem;
+    background: #fcfcfc;
+}
+#accordion-section button.accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    
+    font-size: 13px;
+    color: #262C30;
+    float: right;
+    margin-left: 5px;
+    margin-top: -3.5rem;
+}
+#accordion-section button.accordion.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+    
+    color: #ffffff;
+}
+/*--   accordion-section Responsive   --*/
+
+@media(max-width:640px) {
+    #accordion-section button.accordion h4 {
+        padding-right: 25px;
+    }
+}
+/*  UI Elements  */
+
+.ui-elements {
+    background: #efefef;
+}
+/*  Dropdown & Dropup  */
+
+.ui-elements .dropdown .dropdown-menu a,
+.ui-elements .dropup .dropdown-menu a {
+    border-bottom: 3px solid transparent;
+    color: #262C30;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+.ui-elements .dropdown button:hover,
+.ui-elements .dropdown button:active,
+.ui-elements .dropdown button:focus,
+.ui-elements .dropup button:hover,
+.ui-elements .dropup button:active,
+.ui-elements .dropup button:focus {
+    border-radius: 0px;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+.ui-elements .dropdown .dropdown-menu a:hover,
+.ui-elements .dropdown .dropdown-menu a:focus,
+.ui-elements .dropdown .dropdown-menu a:active,
+.ui-elements .dropup .dropdown-menu a:hover,
+.ui-elements .dropup .dropdown-menu a:focus,
+.ui-elements .dropup .dropdown-menu a:active {
+    background: #8C8C8C;
+    color: #ffffff;
+}
+.ui-elements .open>.dropdown-toggle.btn-primary {
+    color: #fff !important;
+    background-color: #8C8C8C !important;
+    border-color: transparent !important;
+}
+.element-dropdown {
+    margin-bottom: 30px;
+}
+/*  BTN-Group  */
+
+.element-btn-group {
+    margin-bottom: 30px;
+}
+.btn-group-default button {
+    border: 1px solid #fafafa !important;
+}
+.btn-group-default button:hover {
+    border: 1px solid transparent !important;
+}
+.btn-group-primary button {
+    border: 1px solid #fafafa !important;
+}
+.btn-group-primary button:hover {
+    border: 1px solid transparent !important;
+}
+/*  Tab */
+
+.tab-area {
+    min-height: 720px;
+    background: #f9f9f9;
+}
+.nav-tabs {
+    border-bottom: 1px solid #8c8c8c;
+    margin-bottom: 30px;
+}
+.nav-tabs>li>a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #8C8C8C;
+    border: 0px;
+    border-bottom: 5px solid transparent;
+    padding: 12px 24px;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+.nav-tabs>li>a:hover {
+    background: transparent;
+    color: #262C30;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+    color: #262C30;
+    cursor: default;
+    background-color: transparent;
+    border: 0px;
+    font-weight: 600;
+    border-bottom: 5px solid #262C30;
+    padding: 12px 36px;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+/*--   form   --*/
+
+#contact-form-section {} #contact-form {
+    width: 80%;
+}
+#contact-form label {
+    font-weight: 100;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+#contact-form input,
+#contact-form textarea {
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+#contact-form textarea {
+    padding: 16px 24px;
+}
+#contact-form button {
+    margin-top: 10px;
+}
+#contact-form::-webkit-input-placeholder,
+#contact-form::-moz-placeholder,
+#contact-form:-moz-placeholder,
+#contact-form:-ms-input-placeholder {
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+/*--   Carousel CSS  --*/
+
+.carousel .carousel-inner img,
+.carousel-indicators li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel-control {
+    display: none;
+}
+.carousel-indicators {
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+.carousel-indicators li,
+.carousel-indicators li.active {
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border: 0px;
+    margin: 0px;
+    border-radius: 0px;
+}
+.carousel-indicators li {
+    opacity: .3;
+    display: block;
+}
+.carousel-indicators li.active {
+    opacity: 1;
+    background: #8c8c8c;
+    padding: 2px;
+}
+/* Sections Responsive CSS */
+/* Phone */
+
+@media (max-width: 490px) {
+    .carousel-indicators li,
+    .carousel-indicators li.active {
+        width: 40px;
+        height: 40px;
+    }
+}
+/*--   Call to Action  --*/
+
+.call-to-action {
+    background-color: #f9f9f9;
+    background-image: url("../img/patern-1.png");
+    padding: 60px 0;
+    background-repeat: repeat;
+    background-size: 214px 17px;
+    background-position: center, center;
+    background-attachment: scroll;
+}
+.call-to-action .hero-title {
+    font-size: 6rem;
+    font-weight: 100;
+    line-height: 8.5rem;
+}
+.call-to-action .hero-subtitle {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3.2rem;
+    opacity: 0.5;
+    margin-bottom: 3.5rem;
+}
+/*--   Responsive Call to Action  --*/
+
+@media(min-width:1080px) {
+    .call-to-action .btn {
+        margin-top: 80px;
+    }
+}
+@media(max-width:1080px) {
+    .call-to-action .hero-title, .call-to-action .hero-subtitle {
+        text-align: center;
+    }
+}
+@media(max-width:840px) {
+    .call-to-action .hero-title {
+        font-size: 48px;
+        line-height: 52px;
+    }
+    .call-to-action.hero-subtitle {
+        font-size: 16px;
+    }
+}
+@media(max-width:640px) {
+    .call-to-action .hero-text {
+        text-align: center;
+        padding: 0px 20px;
+    }
+}

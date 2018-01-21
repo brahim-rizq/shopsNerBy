@@ -1,0 +1,215 @@
+<?php
+// src/AppBundle/Entity/User.php
+
+namespace AppBundle\Entity;
+
+use FOS\UserBundle\Model\User as BaseUser;
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+/**
+ * @ORM\Entity
+ * @ORM\HasLifecycleCallbacks()
+ * @ORM\Table(name="fos_user")
+ */
+class User extends BaseUser
+{
+    /**
+     * @ORM\Id
+     * 
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created_at", type="datetime", nullable=true)
+     */
+    private $createdAt;
+
+
+    /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Shops",mappedBy="createdBy")
+     * 
+     */
+    protected $shop;
+
+    /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Category", mappedBy="createdBy")
+     * 
+     */
+    protected $category;
+
+    /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Likes", mappedBy="user")
+     * 
+     */
+    protected $likes;
+
+    /**
+     * 
+     *@ORM\OneToOne(targetEntity="AppBundle\Entity\Userinfo", cascade={"persist" ,"remove"}, inversedBy="user")
+     *@ORM\JoinColumn(name="userinfo_id", referencedColumnName="id", nullable=true)
+     * @Assert\Valid()
+     */
+    private $userinfo;
+
+
+    public function __construct()
+    {
+        parent::__construct();
+        // your own logic
+    }
+
+
+    /**
+     *
+     * @ORM\PrePersist
+     */
+    public function setCreatedAt()
+    {
+        $this->createdAt = new \DateTime();
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * Add shop
+     *
+     * @param \AppBundle\Entity\Shops $shop
+     *
+     * @return User
+     */
+    public function addShop(\AppBundle\Entity\Shops $shop)
+    {
+        $this->shop[] = $shop;
+
+        return $this;
+    }
+
+    /**
+     * Remove shop
+     *
+     * @param \AppBundle\Entity\Shops $shop
+     */
+    public function removeShop(\AppBundle\Entity\Shops $shop)
+    {
+        $this->shop->removeElement($shop);
+    }
+
+    /**
+     * Get shop
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getShop()
+    {
+        return $this->shop;
+    }
+
+    /**
+     * Add category
+     *
+     * @param \AppBundle\Entity\category $category
+     *
+     * @return User
+     */
+    public function addCategory(\AppBundle\Entity\category $category)
+    {
+        $this->category[] = $category;
+
+        return $this;
+    }
+
+    /**
+     * Remove category
+     *
+     * @param \AppBundle\Entity\category $category
+     */
+    public function removeCategory(\AppBundle\Entity\category $category)
+    {
+        $this->category->removeElement($category);
+    }
+
+    /**
+     * Get category
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+
+    /**
+     * Set userinfo
+     *
+     * @param \AppBundle\Entity\Userinfo $userinfo
+     *
+     * @return User
+     */
+    public function setUserinfo(\AppBundle\Entity\Userinfo $userinfo = null)
+    {
+        $this->userinfo = $userinfo;
+
+        return $this;
+    }
+
+    /**
+     * Get userinfo
+     *
+     * @return \AppBundle\Entity\Userinfo
+     */
+    public function getUserinfo()
+    {
+        return $this->userinfo;
+    }
+
+
+
+    /**
+     * Add like
+     *
+     * @param \AppBundle\Entity\Likes $like
+     *
+     * @return User
+     */
+    public function addLike(\AppBundle\Entity\Likes $like)
+    {
+        $this->likes[] = $like;
+
+        return $this;
+    }
+
+    /**
+     * Remove like
+     *
+     * @param \AppBundle\Entity\Likes $like
+     */
+    public function removeLike(\AppBundle\Entity\Likes $like)
+    {
+        $this->likes->removeElement($like);
+    }
+
+    /**
+     * Get likes
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getLikes()
+    {
+        return $this->likes;
+    }
+}

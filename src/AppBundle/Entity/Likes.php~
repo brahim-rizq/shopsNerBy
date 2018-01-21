@@ -1,0 +1,60 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Likes
+ *
+ * @ORM\Table(name="likes")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\LikesRepository")
+ */
+class Likes
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="isLiked", type="boolean", options={"default":0})
+     */
+    private $isLiked;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="isDisliked", type="boolean", options={"default":0})
+     */
+    private $isDisliked;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User",cascade={"persist"},inversedBy="likes")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    protected $user;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Shops",cascade={"persist"},inversedBy="likes")
+     * @ORM\JoinColumn(name="shop_id", referencedColumnName="id")
+     */
+    protected $shops;
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}
+

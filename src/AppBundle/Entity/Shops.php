@@ -1,0 +1,528 @@
+<?php
+
+namespace AppBundle\Entity;
+use Symfony\Component\Validator\Constraints as Assert;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Shops
+ * @ORM\HasLifecycleCallbacks()
+ * @ORM\Table(name="shops")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ShopsRepository")
+ */
+class Shops
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lat", type="float")
+     */
+    private $lat;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lang", type="float")
+     */
+    private $lang;
+
+    /**
+     * @var string 
+     *
+     * @ORM\Column(name="address", type="string", length=255)
+     */
+    private $address;
+
+    /**
+     * @var string 
+     *
+     * @ORM\Column(name="description", type="text")
+     */
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="city", type="string", length=100)
+     */
+    private $city;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="status", type="boolean")
+     */
+    private $status;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created_at", type="datetime", nullable=true)
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User",cascade={"persist"},inversedBy="shop")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    protected $createdBy;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Category",cascade={"persist"},inversedBy="shop")
+     * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
+     */
+    private $category;
+
+    /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Likes", mappedBy="shops")
+     * 
+     */
+    protected $likes;
+
+    protected $imagefile;
+
+    /**
+     * @ORM\Column(name="images_shops",type="string", length=255, nullable=true)
+     */
+    private $imageShops;
+
+    public  $distance = 0;
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+    protected function getUploadRootDirShops()
+    {
+        // the absolute directory path where uploaded
+        // documents should be saved
+        return __DIR__.'/../../../web/uploads/shops/';
+    }
+
+
+    public function uploadShopImages()
+    {
+        
+        if ($this->imagefile === null ){
+            return;
+        }
+
+        if ($this->removeUpload()) {
+            // use the original file name here but you should
+            // sanitize it at least to avoid any security issues
+
+            // move takes the target directory and then the
+            // target filename to move to
+            $filename = uniqid().$this->getImagefile()->getClientOriginalName();
+            $this->getImagefile()->move(
+                $this->getUploadRootDirShops(),
+                $filename
+            );
+
+            // set the path property to the filename where you've saved the file
+            $this->imageShops = $filename;
+
+            // clean up the file property as you won't need it anymore
+            $this->file = null;
+        }
+
+    }
+
+    public function removeUpload()
+    {
+        $path = $this->getUploadRootDirShops();
+        // print_r($this->getUploadRootDirShops());die();
+        if (!empty($this->imageShops)) {
+            unlink($path.$this->imageShops);
+            return true;
+        }
+        return true;
+    }
+
+    /**
+     * Set imagesShops
+     *
+     * @param string $imagesShops
+     *
+     * @return string
+     */
+    public function setImageShops($imagesShops)
+    {
+        
+        $this->imagesShops= $imagesShops;
+        
+        return $this;
+    }
+
+    /**
+     * Get imagesShops
+     *
+     * @return string
+     */
+    public function getImagesShops()
+    {
+        return $this->imagesShops;
+    }
+
+    /**
+     * Sets imagefile.
+     *
+     * @param $imagefile
+     */
+    public function setImagefile($imagefile)
+    {
+        $this->imagefile = $imagefile;
+
+        return $this;
+    }
+
+    /**
+     * Get imagefile.
+     *
+     * @return string
+     */
+    public function getImagefile()
+    {
+        return $this->imagefile;
+    }
+
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Shops
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set address
+     *
+     * @param string $address
+     *
+     * @return Shops
+     */
+    public function setAddress($address)
+    {
+        $this->address = $address;
+
+        return $this;
+    }
+
+    /**
+     * Get address
+     *
+     * @return string
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * Set distance
+     *
+     * @param string $distance
+     *
+     * @return Shops
+     */
+    public function setDistance($distance = 0)
+    {
+        $this->distance = $distance;
+
+        return $this;
+    }
+
+    /**
+     * Get distance
+     *
+     * @return string
+     */
+    public function getDistance()
+    {
+        return $this->distance;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Shops
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set city
+     *
+     * @param string $city
+     *
+     * @return Shops
+     */
+    public function setCity($city)
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return string
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * Set status
+     *
+     * @param boolean $status
+     *
+     * @return Shops
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return boolean
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     *
+     * @ORM\PrePersist
+     */
+    public function setCreatedAt()
+    {
+        $this->createdAt = new \DateTime();
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * Set createdBy
+     *
+     * @param \AppBundle\Entity\User $createdBy
+     *
+     * @return Shops
+     */
+    public function setCreatedBy(\AppBundle\Entity\User $createdBy = null)
+    {
+        $this->createdBy = $createdBy;
+
+        return $this;
+    }
+
+    /**
+     * Get createdBy
+     *
+     * @return \AppBundle\Entity\User
+     */
+    public function getCreatedBy()
+    {
+        return $this->createdBy;
+    }
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->category = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Get imageShops
+     *
+     * @return array
+     */
+    public function getImageShops()
+    {
+        return $this->imageShops;
+    }
+
+
+
+    /**
+     * Set lat
+     *
+     * @param float $lat
+     *
+     * @return Shops
+     */
+    public function setLat($lat)
+    {
+        $this->lat = $lat;
+
+        return $this;
+    }
+
+    /**
+     * Get lat
+     *
+     * @return float
+     */
+    public function getLat()
+    {
+        return $this->lat;
+    }
+
+    /**
+     * Set lang
+     *
+     * @param float $lang
+     *
+     * @return Shops
+     */
+    public function setLang($lang)
+    {
+        $this->lang = $lang;
+
+        return $this;
+    }
+
+    /**
+     * Get lang
+     *
+     * @return float
+     */
+    public function getLang()
+    {
+        return $this->lang;
+    }
+
+    /**
+     * Set category
+     *
+     * @param \AppBundle\Entity\Category $category
+     *
+     * @return Shops
+     */
+    public function setCategory(\AppBundle\Entity\Category $category = null)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Get category
+     *
+     * @return \AppBundle\Entity\Category
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * Add like
+     *
+     * @param \AppBundle\Entity\Likes $like
+     *
+     * @return Shops
+     */
+    public function addLike(\AppBundle\Entity\Likes $like)
+    {
+        $this->likes[] = $like;
+
+        return $this;
+    }
+
+    /**
+     * Remove like
+     *
+     * @param \AppBundle\Entity\Likes $like
+     */
+    public function removeLike(\AppBundle\Entity\Likes $like)
+    {
+        $this->likes->removeElement($like);
+    }
+
+    /**
+     * Get likes
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getLikes()
+    {
+        return $this->likes;
+    }
+}
